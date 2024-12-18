@@ -11,22 +11,22 @@ events()
 changeComment();
 changeInput();
 
-function events(e){
-    getLeftArrBtn.addEventListener("click" , ()=>{
+async function events(e){
+    await getLeftArrBtn.addEventListener("click" , ()=>{
 
         changeLessonsToLeft()
     });
 
-    getRightArrBtn.addEventListener("click",()=>{
+    await getRightArrBtn.addEventListener("click",()=>{
         changeLessonsToRight();
     }); 
 
-    getPart4Div.addEventListener("mouseover",()=>{
+    await getPart4Div.addEventListener("mouseover",()=>{
         showReply()
 
     })
 
-    getPart4Div.addEventListener("mouseleave",()=>{
+    await getPart4Div.addEventListener("mouseleave",()=>{
         hideReply()
     })
 }
@@ -116,21 +116,38 @@ async function waitSeconds(second) {
 }
 
 async function showReply(){
- 
-    await waitSeconds(1500);
-    getPart4Div.children[1].children[1].children[0].style.display = "none";
-    getPart4Div.children[1].children[1].children[1].style.display = "block";
-    await waitSeconds(500)
-    getPart4Div.children[1].children[1].children[1].style.opacity = "1";
-    isAnimating=false
+    if(isAnimating == true){
+        return;
+    }
+    else{
+        await waitSeconds(1500);
+        getPart4Div.children[1].children[1].children[0].style.display = "none";
+        getPart4Div.children[1].children[1].children[1].style.display = "block";
+        await waitSeconds(500)
+        getPart4Div.children[1].children[1].children[1].style.opacity = "1";
+        getPart4Div.children[1].children[0].children[1].children[1].style.display = "inline";
+        await waitSeconds(1000)
+        getPart4Div.children[1].children[0].children[1].children[1].style.opacity = "1";
+        getPart4Div.children[1].children[0].children[1].children[1].style.fontSize = "3rem";
+        isAnimating = false;
+    }
+    
 }
 
 async function hideReply(){
-
-    await waitSeconds(1500);
-    getPart4Div.children[1].children[1].children[1].style.opacity = "0";
-    await waitSeconds(500)
-    getPart4Div.children[1].children[1].children[1].style.display = "none";
-    getPart4Div.children[1].children[1].children[0].style.display = "block";
-
+    if(isAnimating == true){
+        return;
+    }
+    
+    else{
+        await waitSeconds(1500);
+        getPart4Div.children[1].children[1].children[1].style.opacity = "0";
+        await waitSeconds(500)
+        getPart4Div.children[1].children[1].children[1].style.display = "none";
+        getPart4Div.children[1].children[1].children[0].style.display = "block";
+        getPart4Div.children[1].children[0].children[1].children[1].style.opacity = "0";
+        getPart4Div.children[1].children[0].children[1].children[1].style.fontSize = "5rem";
+        getPart4Div.children[1].children[0].children[1].children[1].style.display = "none";
+        isAnimating=false;
+    }
 }
