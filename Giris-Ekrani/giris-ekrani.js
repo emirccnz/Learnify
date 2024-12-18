@@ -2,12 +2,15 @@ const getLeftArrBtn = document.getElementById("leftArrBtn");
 const getRightArrBtn = document.getElementById("rightArrBtn");
 const getLessonsBox = document.getElementById("lessonsBox");
 const getCommentDiv = document.getElementById("commentsID");
-const getQuestionInput = document.getElementById("questionInput")
+const getQuestionInput = document.getElementById("questionInput");
+const getPart4Div = document.getElementById("part4Div");
 let counter = 0
 let i= 0;
+let isAnimating = false;
 events()
 changeComment();
 changeInput();
+
 function events(e){
     getLeftArrBtn.addEventListener("click" , ()=>{
 
@@ -17,6 +20,15 @@ function events(e){
     getRightArrBtn.addEventListener("click",()=>{
         changeLessonsToRight();
     }); 
+
+    getPart4Div.addEventListener("mouseover",()=>{
+        showReply()
+
+    })
+
+    getPart4Div.addEventListener("mouseleave",()=>{
+        hideReply()
+    })
 }
 
 
@@ -101,4 +113,24 @@ async function waitSeconds(second) {
     return new Promise(resolve => {
         setTimeout(resolve, second);
     });
+}
+
+async function showReply(){
+ 
+    await waitSeconds(1500);
+    getPart4Div.children[1].children[1].children[0].style.display = "none";
+    getPart4Div.children[1].children[1].children[1].style.display = "block";
+    await waitSeconds(500)
+    getPart4Div.children[1].children[1].children[1].style.opacity = "1";
+    isAnimating=false
+}
+
+async function hideReply(){
+
+    await waitSeconds(1500);
+    getPart4Div.children[1].children[1].children[1].style.opacity = "0";
+    await waitSeconds(500)
+    getPart4Div.children[1].children[1].children[1].style.display = "none";
+    getPart4Div.children[1].children[1].children[0].style.display = "block";
+
 }
