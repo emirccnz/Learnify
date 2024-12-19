@@ -12,59 +12,6 @@ html{
     font-size: 10px;
     font-family: "ProximaNova", "Helvetica", "Arial", sans-serif;
 }
-header{
-    z-index: 2;
-    display: flex;
-    background-color: #38587e;
-    width: 100%;
-    justify-content: space-between;
-    position: fixed;
-}
-.leftSideH{
-    display: flex;
-    margin: 5px;
-    margin-left: 5%;
-    align-items: center;
-    justify-content: center
-}
-header img{
-    width: 5rem;
-    height:5rem;
-}
-
-header h1{
-    display: inline;
-    margin-left: 10px;
-    font-size: 3rem;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    color: white;
-}
-.rightSideH{
-    display: flex;
-    align-items: center;
-    margin: 10px;
-    margin-right: 40px;
-}
-.rightSideH a button{
-    font-family: "Roboto Condensed", sans-serif;
-    background-color: #38587e;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 500;
-    height: 3rem;
-    width: 8rem;
-    border: 0;
-    border-radius: 10%;
-    margin-left: 20px;
-}
-
-.rightSideH a button:hover{
-    background-color: white;
-    color: #38587e;
-    transition: 0.5s;
-}
 
 .container{
     background-color: red;
@@ -85,3 +32,29 @@ header h1{
 .rightSide{
     float:right;
 }
+
+@media screen and (max-width: 1000px) {
+    html {
+      font-size: 9px;
+    }
+    .left-side h3 {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    html {
+      font-size: 6px;
+    }
+    .input-container input {
+      height: 28px;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    html {
+      font-size: 5px;
+    }
+    .icon {
+      display: none;
+    }
+  }
+  
