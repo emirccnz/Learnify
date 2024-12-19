@@ -12,6 +12,13 @@
 html {
     font-size: 10px;
     font-family: "ProximaNova", "Helvetica", "Arial", sans-serif;
+
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ask-question {
@@ -29,11 +36,17 @@ html {
     border-radius: 8px;
     margin-bottom: 15px;
     background-color: #ebf2f7;
+    overflow: auto;
+    border: none;
 }
-
+#questionInput:focus{
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
 button {
-    background-color: #2b4360;
-    color: #fff;
+    background-color: lightblue;
+    color: black;
     padding: 1rem;
     border: none;
     border-radius: 5px;
@@ -66,8 +79,8 @@ button:hover {
 }
 
 .dropdown-btn {
-    background-color: #2b4360;
-    color: #fff;
+    background-color: lightblue;
+    color: black;
     padding: 1rem;
     border: none;
     border-radius: 8px;
@@ -108,35 +121,55 @@ button:hover {
 
 .symbol{
     font-size: 25px;
-    background-color: #fff;
+    background-color: #38587e;
     display: inline;
 }
 
 .symbol i{
-    color: black;
+    color: #ebf2f7;
     display: inline-block;
     margin-left: 1rem;
 }
 
 .question{
     font-size: 12px;
-    background-color: #fff;
+    background-color: #38587e;
     display: inline;
 }
 
 .question i{
-    color: black;
+    color: white;
     display: inline-block;
     padding-right: 10px;
     margin-left: 5px;        
 }
 
 .question a{
-    color: black;
+    color: white;
     text-decoration: none;
     margin-left: -2px;
 }
 
+.DersLogosu img{
+    width: 46rem;
+    height: 46rem;
+    display: inline-block;
+}
+
+.DersLogosu{
+    display: block;
+    float: right;
+    margin-top: -13rem;
+    margin-left: 11rem;
+}
+
+.box{
+    margin-left: -10rem;
+    margin-top: -3rem;
+    background-color: #38587e;
+    padding: 3rem;
+    border-radius: 1rem ;
+}
 
 @media screen and (max-width:900px) {
     html {
@@ -155,3 +188,4 @@ button:hover {
         font-size: 5px;
     }
 }
+
