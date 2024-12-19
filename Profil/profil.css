@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Jolly+Lodger&family=Modak&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 10px;
+    font-family: "ProximaNova", "Helvetica", "Arial", sans-serif;
+}
+header{
+    z-index: 2;
+    display: flex;
+    background-color: #38587e;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+}
+.leftSideH{
+    display: flex;
+    margin: 5px;
+    margin-left: 5%;
+    align-items: center;
+    justify-content: center
+}
+header img{
+    width: 5rem;
+    height:5rem;
+}
+
+header h1{
+    display: inline;
+    margin-left: 10px;
+    font-size: 3rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    color: white;
+}
+.rightSideH{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    margin-right: 40px;
+}
+.rightSideH a button{
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: #38587e;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    height: 3rem;
+    width: 8rem;
+    border: 0;
+    border-radius: 10%;
+    margin-left: 20px;
+}
+
+.rightSideH a button:hover{
+    background-color: white;
+    color: #38587e;
+    transition: 0.5s;
+}
+
+.container{
+    background-color: red;
+    padding-top: 5%;
+}
+.leftSide{
+    width: 30%;
+    background-color: #38587e;
+    margin-left: 20%;
+}
+
+.userImg{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.rightSide{
+    float:right;
+}
