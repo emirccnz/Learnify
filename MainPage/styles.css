@@ -136,3 +136,59 @@ header {
     display: none;
   }
 }
+
+.nav-bar {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  height: auto;
+}
+
+.nav-bar-left-side {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+  margin-right: 5rem;
+  margin-top: 4rem;
+  text-align: left;
+  width: 25%;
+}
+
+.nav-bar-left-side h3 {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 2rem;
+  border-bottom: 2px solid grey;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+.nav-bar-items {
+  margin-left: 4rem;
+  list-style-type: none;
+}
+
+.nav-bar-items a {
+  text-decoration: none;
+  color: black;
+  margin-left: 1.3rem;
+}
+
+.nav-bar-item {
+  margin-bottom: 2rem;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.nav-bar-item:first-child {
+  margin-top: 1.5rem;
+}
+
+.nav-bar-items-icon {
+  font-size: 1.6rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
