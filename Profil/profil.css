@@ -14,47 +14,184 @@ html{
 }
 
 .container{
-    background-color: red;
-    padding-top: 5%;
+  padding-bottom: 5%;
+    box-sizing: border-box;
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
 }
 .leftSide{
-    width: 30%;
-    background-color: #38587e;
-    margin-left: 20%;
+    width: 25%;
 }
-
+.userInfoMain{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
 .userImg{
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
 }
-
+.userNames{
+  margin-left: 10px;
+}
 .rightSide{
-    float:right;
+    width: 40%;
+    margin-left: 5%
+}
+.userDegree{
+  margin-top: 10px;
+  background-color: yellow;
+  display: inline-block;
+  padding: 0.5rem;
+  border: 0.2rem black solid;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+.puanify{
+  font-size: 1rem;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+}
+.puanify img{
+  width: 2rem;
+  height: 2rem;
+  
+}
+.puanify p{
+  margin-left: 5px;
+}
+.puanify i{
+  margin-left: 5px;
+}
+.puanify i:hover{
+  cursor: pointer;
+}
+.stats{
+  display: flex;
+  margin-top: 5%;
+  text-align: center;
+  justify-content: space-between;
+  width: 80%;
+}
+.stats h2{
+  margin-top: 5px;
+}
+.userAbout{
+  margin-top: 30px;
+}
+.userAbout h2{
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+.userAbout div{
+  margin-bottom: 7px;
+}
+.userAbout div i,.userAbout div h5,.userAbout div p{
+  display: inline;
+  font-size: 1.2rem;
 }
 
+.userAbout div i{
+  margin-right: 5px;
+}
+
+.setProfile{
+  margin-top:50px;
+  text-align: center;
+  margin-bottom: 50px;
+  width: 80%;
+}
+.setProfile i{
+  font-size: 1.1rem;
+  margin-right: 5px;
+}
+.setProfile button{
+  padding: 8px;
+  width: 100%;
+  border-radius: 9px;
+  border: none;
+  background-color: #ebf2f7;
+  font-size: 1.2rem;
+}
+.setProfile button:hover{
+  background-color: #cecfd0;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.navBar{
+  margin-top: 10px;
+
+  text-align: center;
+}
+.navBar button:nth-child(2){
+  margin-left: 30px;
+}
+.navBar button{
+  background-color: white;
+  border: none;
+  padding: 5px;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.navBar button:nth-child(1){
+  border-bottom: 1.5px blue solid;
+}
+.navBar button:hover{
+  background-color: #ebf2f7;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.content{
+  background-color: #ebf2f7;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  min-height: 35rem;
+  max-height: 35rem;
+  margin: 30px;
+  margin-top: 20px;
+}
+.questions{
+  display: none;
+}
 @media screen and (max-width: 1000px) {
     html {
       font-size: 9px;
     }
-    .left-side h3 {
-      display: none;
-    }
+    
   }
   @media only screen and (max-width: 700px) {
     html {
       font-size: 6px;
     }
-    .input-container input {
-      height: 28px;
+    .container{
+      display: block;
     }
+    .leftSide{
+      margin-top: 40px;
+      margin-left: 25%;
+      width: 50%;
+    }
+    .rightSide{
+      text-align: center;
+      width: 100%;
+      margin-left: 0px;
+    }
+    
   }
   @media screen and (max-width: 550px) {
     html {
       font-size: 5px;
     }
-    .icon {
-      display: none;
-    }
+    
   }
   

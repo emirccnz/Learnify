@@ -243,6 +243,7 @@ header h1{
     width: 50%;
     height: 3rem;
     padding-left: 20px;
+    font-size: 1.3rem
 }
 .questionInputDiv input:focus{
     transition: 0.05s;

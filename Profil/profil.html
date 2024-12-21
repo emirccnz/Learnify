@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/ödevboxicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/genel-css/header.css">
     <link rel="stylesheet" href="/genel-css/footer.css">
     <link rel="stylesheet" href="profil.css">
@@ -40,13 +41,58 @@
         <div class="leftSide">
             <div class="userInfoMain">
                 <img class="userImg"src="/images/IMG-20241215-WA0006.jpg" alt="">  
-                <h1 class="nickname">Emruu</h1>
-                <h3 class="username">Emircan Cengiz</h3>
-                <div class="userDegree">Amatör</div>
+                <div class="userNames">
+                  <h1 class="nickname">Emruu</h1>
+                  <h3 class="username">Emircan Cengiz</h3>
+                </div>
+                
+            </div>
+            <div class="userDegree" style="display:inline-block;"><p>Amatör</p></div>
+            <div class="puanify">
+              <img src="/images/puanify.png" alt="">
+              <p>75 puanify</p>
+              <i class="fa-solid fa-circle-question"></i>
+            </div>
+            <div class="stats">
+              <div class="cevaplarStat">
+                <p>Cevaplar</p>
+                <h2>0</h2>
+              </div>
+              <div class="sorularStat">
+                <p>Sorular</p>
+                <h2>0</h2>
+              </div>
+              <div class="tesekkurStat">
+                <p>Teşekkürler</p>
+                <h2>0</h2>
+              </div>
+            </div>
+            <div class="userAbout">
+              <h2>Hakkında</h2>
+              <div class="school">
+                <i class="fa-solid fa-building-columns"></i> <h5>Eğitim Durumun: </h5> <p>Üniversite</p>
+              </div>
+              <div class="loginDate">
+                <i class="fa-solid fa-calendar-days"></i> <h5>Katılma Tarihin: </h5> <p>21.12.2024</p>
+              </div>
+            </div>
+            <div class="setProfile">
+              <button><i class="fa-solid fa-pen"></i> Profilini Düzenle</button>
             </div>
         </div>
         <div class="rightSide">
-
+          <div class="navBar">
+            <button id="repliesBtn">Cevapların</button>
+            <button id="questionsBtn">Sorular</button>
+          </div>
+          <div class="content" id="contentDiv">
+              <div class="replies">
+                <p>Henüz soru cevaplamadın.</p>
+              </div>
+              <div class="questions">
+                <p>Henüz soru sormadın.</p>
+              </div>
+          </div>
         </div>
     </div>
 
