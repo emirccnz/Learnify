@@ -36,7 +36,7 @@ header {
   }
   
   .input-container input {
-    height: 40px;
+    height: 4rem;
     width: 100%;
     margin-left: 2rem;
   }
@@ -44,7 +44,7 @@ header {
   .search-input {
     width: 100%;
     padding: 0.8rem;
-    height: 40px;
+    height: 4rem;
     font-size: 1.6rem;
     border: 2px solid gray;
     border-radius: 12px;
@@ -61,7 +61,12 @@ header {
     font-size: 1.8rem;
     pointer-events: none;
   }
-  
+  .right-side{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
   .right-side a {
     text-decoration: none;
     text-transform: uppercase;
@@ -71,17 +76,12 @@ header {
     font-family: "Roboto Condensed", sans-serif;
     font-size: 1.5rem;
     color: #fff;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding-left: 4rem;
     height: 3rem;
-    width: 8rem;
     background-color: #38587e;
-    padding: 1rem;
     font-weight: bold;
     text-align: center;
-    margin-right: 1rem;
     margin-left: 2rem;
+    padding: 1rem;
   }
   
   .button-text:hover {
@@ -94,7 +94,6 @@ header {
   .icons {
     font-size: 2rem;
     text-align: center;
-    margin: 15px;
     cursor: pointer;
     color: #fff;
   }
