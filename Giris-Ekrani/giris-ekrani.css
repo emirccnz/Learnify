@@ -2,11 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Jolly+Lodger&family=Modak&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css");
-/* *{    background-color: #e69139;
-    background-color: #c3c6c7;
-    background-color: #7d7f83;
-    background-color: #2b4360;
-} */
+
 *{
     margin: 0;
     padding: 0;
@@ -176,18 +172,11 @@ header h1{
     height: 8rem;
     margin-bottom: 10px;
 }
-.turkceDiv{
+.lesson{
     display: none;
     opacity: 0;
 }
-.mathDiv{
-    display: none;
-   opacity: 0;
-}
-.englishDiv{
-    display: none;
-    opacity: 0;
-}
+
 .userCommentsDiv{
     margin-bottom: 50px;
 }
