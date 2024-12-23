@@ -3,84 +3,465 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../genel-css/footer.css" />
     <link rel="stylesheet" href="styles.css" />
     <title>Learnify</title>
   </head>
   <body>
-    <header>
-      <div class="left-side">
+    <header class="header">
+      <div class="header-left-side">
         <a href="../Giris-Ekrani/giris-ekrani.html">
-          <img src="../images/ödevboxicon.png" alt="Learnify" />
+          <img src="../images/ödevboxicon.png" alt="" />
         </a>
         <h3>learnify</h3>
       </div>
-      <div class="input-container">
+
+      <div class="header-mid-side">
         <i class="fa-solid fa-magnifying-glass icon"></i>
         <input
-          class="search-input"
           type="search"
+          class="search-input"
           placeholder="Herhangi bir soru arayabilirsin..."
         />
       </div>
-      <div class="right-side">
-        <a href="#"> <span class="button-text">soru sor</span></a>
-        <span class="icons">
+
+      <div class="header-right-side">
+        <a href="#">
+          <span class="button-text"> soru sor</span>
+        </a>
+        <span class="header-right-side-icon">
           <i class="fa-regular fa-bell"></i>
         </span>
-        <span class="icons">
+        <span class="header-right-side-icon">
           <i class="fa-regular fa-user"></i>
         </span>
       </div>
     </header>
 
-    <nav class="nav-bar">
-      <div class="nav-bar-left-side">
-        <h3>Konular</h3>
-        <ul class="nav-bar-items">
-          <li>
-            <div class="nav-bar-items-icon nav-bar-item">
-              <i class="fa-solid fa-list-ul"></i>
-              <a href="#">Bütün konular</a>
+    <div class="container">
+      <nav class="nav-bar">
+        <div>
+          <h3>Konular</h3>
+          <ul class="nav-bar-items">
+            <li>
+              <div class="nav-bar-items-icon nav-bar-item">
+                <i class="fa-solid fa-list-ul"></i>
+                <a href="#">Bütün konular</a>
+              </div>
+            </li>
+            <li>
+              <div class="nav-bar-items-icon nav-bar-item">
+                <i class="fa-solid fa-square-root-variable"></i>
+                <a href="#">Matematik</a>
+              </div>
+            </li>
+            <li>
+              <div class="nav-bar-items-icon nav-bar-item">
+                <i class="fa-solid fa-book-open"></i>
+                <a href="#">Türkçe</a>
+              </div>
+            </li>
+            <li>
+              <div class="nav-bar-items-icon nav-bar-item">
+                <i class="fa-solid fa-laptop-code"></i>
+                <a href="#"> Yazılım </a>
+              </div>
+            </li>
+            <li>
+              <div class="nav-bar-items-icon nav-bar-item">
+                <i class="fa-solid fa-atom"></i>
+                <a href="#"> Fizik </a>
+              </div>
+            </li>
+            <li>
+              <div class="nav-bar-items-icon nav-bar-item">
+                <i class="fa-solid fa-place-of-worship"></i>
+                <a href="#">Tarih</a>
+              </div>
+            </li>
+            <li>
+              <div class="nav-bar-items-icon nav-bar-item">
+                <i class="fa-solid fa-flag-usa"></i>
+                <a href="#">İngilizce</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main class="content">
+        <div class="quest">
+          <div class="content-header">
+            <div class="profile">
+              <img src="../images/emir.png" alt="user-profil" />
+              <span>emirc_cngz2</span>
             </div>
+            <div class="konu">Matematik</div>
+          </div>
+          <div class="questions">
+            <p>
+              Gerçek sayılar kümesinde tanımlı y = f(x) fonksiyonu azalan
+              fonksiyondur. f(2) = 10 f(5) = 4 olduğuna göre, f(4) ifadesinin
+              alabileceği farklı tam sayı değerlerinin toplamı kaçtır?
+            </p>
+          </div>
+          <div class="answer">
+            <i class="fa-solid fa-medal"></i>
+            <span class="points">+25 pn</span>
+            <button>CEVAPLA</button>
+          </div>
+        </div>
+
+        <div class="quest">
+          <div class="content-header">
+            <div class="profile">
+              <img src="../images/burak.png" alt="user-profil" />
+              <span>buraakcavusoglu</span>
+            </div>
+            <div class="konu">İngilizce</div>
+          </div>
+          <div class="questions">
+            <p>
+              gecmiste yasanan zorluk ile ilgili bir karekter yaratip ingilizce
+              3 past simple 3 past continous yazarmisiniz
+            </p>
+          </div>
+          <div class="answer">
+            <i class="fa-solid fa-medal"></i>
+            <span class="points">+30 pn</span>
+            <button>CEVAPLA</button>
+          </div>
+        </div>
+
+        <div class="quest">
+          <div class="content-header">
+            <div class="profile">
+              <img src="../images/caner.png" alt="user-profil" />
+              <span>arici.caner</span>
+            </div>
+            <div class="konu">Türkçe</div>
+          </div>
+          <div class="questions">
+            <p>
+              Toplumu - Gerçekçi şiir anlayışını yansıtan bir adet dörtlük?
+              Lütfen bugün içerisinde olursa çok yardımınız dokunmuş olucak​
+            </p>
+          </div>
+          <div class="answer">
+            <i class="fa-solid fa-medal"></i>
+            <span class="points">+10 pn</span>
+            <button>CEVAPLA</button>
+          </div>
+        </div>
+
+        <div class="quest">
+          <div class="content-header">
+            <div class="profile">
+              <img src="../images/cebrail.png" alt="user-profil" />
+              <span>cebrail_krc</span>
+            </div>
+            <div class="konu">Fizik</div>
+          </div>
+          <div class="questions">
+            <p>
+              1. 2 kg kütleli bir cisme, yatay düzlemde 10 N büyüklüğündeki F
+              53° F kuvveti şekildeki gibi uygulan- Yatay dığında cisim 1 m/s²
+              büyüklü- K Yatay ğündeki ivme ile hızlanıyor. Buna göre, cisim ile
+              yüzey arasında sürtünme katsayısı ne- dir? (g = 10 m/s²; sin53° =
+              0,8; cos53° = 0,6)​
+            </p>
+          </div>
+          <div class="answer">
+            <i class="fa-solid fa-medal"></i>
+            <span class="points">+15 pn</span>
+            <button>CEVAPLA</button>
+          </div>
+        </div>
+
+        <div class="quest">
+          <div class="content-header">
+            <div class="profile">
+              <img src="../images/doğu.png" alt="user-profil" />
+              <span>dogugemici0</span>
+            </div>
+            <div class="konu">Tarih</div>
+          </div>
+          <div class="questions">
+            <p>
+              1- "Fatih Sultan Mehmet Döneminde (1451-1481), 1460'da
+              Cenevizliler'den Amasra, 1461'de Candarogullari Beyligi'nden Sinop
+              ve 1461'de Trabzon Rum Imparatorlugu'ndan Trabzon ve kuzeyde
+              Cenevizlilerden Kirim alinmistir." Fatih gerçeklestirdigi bu
+              fetihlerle hangi denizi bir Türk gölü haline getirmeyi
+              bagarmistir? Adini yaziniz.
+            </p>
+          </div>
+          <div class="answer">
+            <i class="fa-solid fa-medal"></i>
+            <span class="points">+20 pn</span>
+            <button>CEVAPLA</button>
+          </div>
+        </div>
+
+        <div class="quest">
+          <div class="content-header">
+            <div class="profile">
+              <img src="../images/emin.png" alt="user-profil" />
+              <span>xeminyilmaz</span>
+            </div>
+            <div class="konu">Yazılım</div>
+          </div>
+          <div class="questions">
+            <p>
+              yazılı ortalaması girilen öğrencinin sınıf geçme durumunu gecti-
+              kaldı gösteren Python kodlarını yazınız.(geçme notu 50 ve
+              üstüdür)​
+            </p>
+          </div>
+          <div class="answer">
+            <i class="fa-solid fa-medal"></i>
+            <span class="points">+25 pn</span>
+            <button>CEVAPLA</button>
+          </div>
+        </div>
+
+        <div class="quest">
+          <div class="content-header">
+            <div class="profile">
+              <img src="../images/enes.png" alt="user-profil" />
+              <span>enes.kvtt</span>
+            </div>
+            <div class="konu">Tarih</div>
+          </div>
+          <div class="questions">
+            <p>
+              Dünya Ekonomik Buhranı nedeniyle aşağıdaki ülkelerin hangisinde
+              savaş yanlıs bir parti yönetimi ele geçirmiştir? <br />
+              <br />
+              A) Portekiz C) Danimarka B) İtalya İsviçre​
+            </p>
+          </div>
+          <div class="answer">
+            <i class="fa-solid fa-medal"></i>
+            <span class="points">+40 pn</span>
+            <button>CEVAPLA</button>
+          </div>
+        </div>
+
+        <div class="quest">
+          <div class="content-header">
+            <div class="profile">
+              <img src="../images/güven.png" alt="user-profil" />
+              <span>guvenn_17</span>
+            </div>
+            <div class="konu">Matematik</div>
+          </div>
+          <div class="questions">
+            <p>
+              5 3 6 2 rakamları ile yazılabilecek üç basamaklı ve Rakamları
+              birbirinden farklı en küçük sayının 34 katı kaçtır
+            </p>
+          </div>
+          <div class="answer">
+            <i class="fa-solid fa-medal"></i>
+            <span class="points">+25 pn</span>
+            <button>CEVAPLA</button>
+          </div>
+        </div>
+
+        <div class="quest">
+          <div class="content-header">
+            <div class="profile">
+              <img src="../images/osman.png" alt="user-profil" />
+              <span>osmanyasinzeytun</span>
+            </div>
+            <div class="konu">Yazılım</div>
+          </div>
+          <div class="questions">
+            <p>
+              1'den kullanıcının girdiği sayıya kadar olan sayıların çarpımını
+              hesaplayan algoritma ve akış şeması
+            </p>
+          </div>
+          <div class="answer">
+            <i class="fa-solid fa-medal"></i>
+            <span class="points">+20 pn</span>
+            <button>CEVAPLA</button>
+          </div>
+        </div>
+
+        <div class="quest">
+          <div class="content-header">
+            <div class="profile">
+              <img src="../images/arif.png" alt="user-profil" />
+              <span>arifkrnn0</span>
+            </div>
+            <div class="konu">Fizik</div>
+          </div>
+          <div class="questions">
+            <p>
+              72 km/h hızla giden bir aracın sürücüsü 60 m ileride du- ran başka
+              bir aracı gördüğü anda frene basarak 4 m/s² ivmeyle yavaşlamaya
+              başlıyor. Buna göre yavaşlayan araçla ilgili aşağıdakilerden
+              hangisi doğrudur? <br />
+              <br />
+              A) Tam araca çarpmak üzereyken durur. B) Araca çarpar. C) Araça 5
+              m uzaklıkta durur. D) Araca 10 m uzaklıkta durur. Y E) Araca 20 m
+              uzaklıkta durur.​
+            </p>
+          </div>
+          <div class="answer">
+            <i class="fa-solid fa-medal"></i>
+            <span class="points">+20 pn</span>
+            <button>CEVAPLA</button>
+          </div>
+        </div>
+
+        <div class="quest">
+          <div class="content-header">
+            <div class="profile">
+              <img src="../images/resül.png" alt="user-profil" />
+              <span>arifkrnn0</span>
+            </div>
+            <div class="konu">Fizik</div>
+          </div>
+          <div class="questions">
+            <p>
+              when did you start using social media? cevapalrını yazar mısınız​
+            </p>
+          </div>
+          <div class="answer">
+            <i class="fa-solid fa-medal"></i>
+            <span class="points">+10 pn</span>
+            <button>CEVAPLA</button>
+          </div>
+        </div>
+
+        <div class="quest">
+          <div class="content-header">
+            <div class="profile">
+              <img src="../images/sezer.png" alt="user-profil" />
+              <span>szr_zlm</span>
+            </div>
+            <div class="konu">Matematik</div>
+          </div>
+          <div class="questions">
+            <p>
+              Bir toptancı metresini 20 liradan aldığı 120 metrelik bir kumaşın
+              tamamını satmıştır. Bu toptancı bu kumaşın metresini 25 lira- dan
+              sattığına göre bu satıştan kaç lira kâr elde etmiştir? <br />
+              <br />
+              A) 1200 C) 300 B) 600 D) 150​
+            </p>
+          </div>
+          <div class="answer">
+            <i class="fa-solid fa-medal"></i>
+            <span class="points">+20 pn</span>
+            <button>CEVAPLA</button>
+          </div>
+        </div>
+
+        <div class="quest">
+          <div class="content-header">
+            <div class="profile">
+              <img src="../images/umut.png" alt="user-profil" />
+              <span>umutrahmanplt</span>
+            </div>
+            <div class="konu">Tarih</div>
+          </div>
+          <div class="questions">
+            <p>
+              Aşağıdakilerden hangisi 1683 yılında yaşanan Viya- na yenilgisinin
+              sonuçlarından biri değildir? <br />
+              <br />
+              A) Papanın teşviki ile Osmanlılara karşı kutsal bağlaş- manın
+              kurulması B) 1071 Malazgirt zaferi ile başlayan Türk ilerleyişinin
+              durması C) Karlofça Antlaşması ile ilk büyük toprak kayıplarının
+              yaşanması D) Avrupalıların Türk baskısından ve korkusundan kur-
+              tulması E) Osmanlı Devleti'nin var olan topraklarını koruma
+              politikası benimsemesi​
+            </p>
+          </div>
+          <div class="answer">
+            <i class="fa-solid fa-medal"></i>
+            <span class="points">+5 pn</span>
+            <button>CEVAPLA</button>
+          </div>
+        </div>
+      </main>
+
+      <aside class="side-bar">
+        <div class="side-bar-title">
+          <i class="fa-solid fa-crown icon"></i>
+          <h3>En Çok Soru Çözenler</h3>
+        </div>
+
+        <select name="" id="side-bar-select">
+          <option value="1">Günlük</option>
+          <option value="2">Haftalık</option>
+          <option value="3">Aylık</option>
+          <option value="4">Genel</option>
+        </select>
+
+        <ul class="side-bar-items">
+          <li class="side-bar-item">
+            <img src="../images/sercan.jpg" alt="" />
+            <span class="user-name">sercancintosunn</span>
+            <span class="score">1424p</span>
           </li>
-          <li>
-            <div class="nav-bar-items-icon nav-bar-item">
-              <i class="fa-solid fa-square-root-variable"></i>
-              <a href="#">Matematik</a>
-            </div>
+          <li class="side-bar-item">
+            <img src="../images/IMG-20241215-WA0007.jpg" alt="" />
+            <span class="user-name">enes.kvtt</span>
+            <span class="score">1017p</span>
           </li>
-          <li>
-            <div class="nav-bar-items-icon nav-bar-item">
-              <i class="fa-solid fa-book-open"></i>
-              <a href="#">Türkçe</a>
-            </div>
+          <li class="side-bar-item">
+            <img src="../images/IMG-20241215-WA0005.jpg" alt="" />
+            <span class="user-name">muhammedalgil_</span>
+            <span class="score">901p</span>
           </li>
-          <li>
-            <div class="nav-bar-items-icon nav-bar-item">
-              <i class="fa-solid fa-laptop-code"></i>
-              <a href="#"> Yazılım </a>
-            </div>
-          </li>
-          <li>
-            <div class="nav-bar-items-icon nav-bar-item">
-              <i class="fa-solid fa-atom"></i>
-              <a href="#"> Fizik </a>
-            </div>
-          </li>
-          <li>
-            <div class="nav-bar-items-icon nav-bar-item">
-              <i class="fa-solid fa-place-of-worship"></i>
-              <a href="#">Tarih</a>
-            </div>
-          </li>
-          <li>
-            <div class="nav-bar-items-icon nav-bar-item">
-              <i class="fa-solid fa-flag-usa"></i>
-              <a href="#">İngilizce</a>
-            </div>
+          <li class="side-bar-item">
+            <img src="../images/IMG-20241215-WA0006.jpg" alt="" />
+            <span class="user-name">emirc_cngz2</span>
+            <span class="score">726p</span>
           </li>
         </ul>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <div class="footerLearnify">
+        <a href="giris-ekrani.html"
+          ><img src="../images/ödevboxicon.png" alt="icon"
+        /></a>
+        <h3>Learnify</h3>
       </div>
-    </nav>
+      <div class="aLinks">
+        <a href="" class="footerLinks">Basında</a>
+        <a href="" class="footerLinks">Güvenlik</a>
+        <a href="" class="footerLinks">Yasal</a>
+        <a href="" class="footerLinks">Hizmet Şartları</a>
+        <a href="" class="footerLinks">Gizlilik Politikası</a>
+        <a href="" class="footerLinks">Destek</a>
+        <a href="" class="footerLinks">E-Verify</a>
+        <a href="" class="footerLinks">Erişilebilirlik</a>
+      </div>
+      <div class="socialMediaLinks">
+        <a href="instagram.com"
+          ><i class="fa-brands fa-instagram" id="instagramIcon"></i
+        ></a>
+        <a href="facebook.com"
+          ><i class="fa-brands fa-facebook" id="facebookIcon"></i
+        ></a>
+        <a href="linkedin.com"
+          ><i class="fa-brands fa-linkedin" id="linkedinIcon"></i
+        ></a>
+        <a href="x.com"
+          ><i class="fa-brands fa-x-twitter" id="twitterIcon"></i
+        ></a>
+        <a href="youtube.com"
+          ><i class="fa-brands fa-youtube" id="youtubeIcon"></i
+        ></a>
+      </div>
+    </footer>
   </body>
 </html>
