@@ -1,73 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Jolly+Lodger&family=Modak&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chokokutai&family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chokokutai&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chokokutai&family=Jolly+Lodger&family=Modak&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css");
-.footer{
-    margin-top: 5rem;
-    padding: 2rem;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    background-color: rgb(63, 62, 62);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 1.3rem;
-    color: white;
+.footer {
+  margin-top: 5rem;
+  padding: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: rgb(63, 62, 62);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.3rem;
+  color: white;
 }
 
-.footerLearnify{
-    margin-left: 5rem;
+.footerLearnify {
+  margin-left: 5rem;
 }
-.footer img{
-    height: 5rem;
-    width: 5rem;
-}
-
-a{
-    text-decoration: none;
+.footer img {
+  height: 5rem;
+  width: 5rem;
 }
 
-
-.aLinks{
-    margin-left: 4rem;
+a {
+  text-decoration: none;
 }
 
-.aLinks a{
-    margin-left: 3rem;
-    color: white;
+.aLinks {
+  margin-left: 4rem;
 }
 
-.aLinks a:hover{
-    text-decoration: underline;
+.aLinks a {
+  margin-left: 3rem;
+  color: white;
 }
 
-.socialMediaLinks{
-    margin-right: 8rem;
+.aLinks a:hover {
+  text-decoration: underline;
 }
 
-.socialMediaLinks *{
-    margin-left: 1rem;
-    color: white;
+.socialMediaLinks {
+  margin-right: 8rem;
 }
 
-.socialMediaLinks i{
-    padding: 0.5rem;
-    border-radius: 50%;
+.socialMediaLinks * {
+  margin-left: 1rem;
+  color: white;
 }
-#instagramIcon:hover{
-    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+
+.socialMediaLinks i {
+  padding: 0.5rem;
+  border-radius: 50%;
 }
-#facebookIcon:hover{
-    background-color: blue;
+#instagramIcon:hover {
+  background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
 }
-#linkedinIcon:hover{
-    background-color: aqua;
-    color: black;
+#facebookIcon:hover {
+  background-color: blue;
 }
-#twitterIcon:hover{
-    background-color: black;
+#linkedinIcon:hover {
+  background-color: aqua;
+  color: black;
 }
-#youtubeIcon:hover{
-    background-color: red;
+#twitterIcon:hover {
+  background-color: black;
+}
+#youtubeIcon:hover {
+  background-color: red;
 }
