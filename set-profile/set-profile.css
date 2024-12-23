@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Jolly+Lodger&family=Modak&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    min-height: 100vh;
+}
+html{
+    font-size: 10px;
+    font-family: "ProximaNova", "Helvetica", "Arial", sans-serif;
+}
+
+.container{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 80vh;
+    margin-bottom: 2%;
+}
+.mainContent{
+    padding: 20px;
+    width: 64%;
+    background-color: #ebf2f7;
+
+    border-radius: 15px;
+}
+.mainContent>h1{
+    border-bottom: 2px #a8adb0 solid;
+    margin-bottom: 30px;
+    margin-top: 20px;
+
+}
+.mainContent>div{
+    width: 100%;
+    margin-top: 10px;
+    padding: 4px;
+}
+.mainContent>div:nth-child(6){
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.mainContent>div>h3{
+    border-bottom: 2px #a8adb0 solid;
+}
+.mainContent>div>h3:hover{
+    cursor: pointer;
+}
+.content{
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;  
+}
+
+.content input{
+    width: 18.3%;
+        font-size: 1.2rem;
+        border: 1px #a8adb0 solid;
+        border-radius: 5px;
+        padding: 4px 6px 4px 6px;
+    
+}
+.content input:focus{
+    outline: none;
+}
+
+.content div{
+    margin-bottom: 10px;
+}
+
+.content h3{
+    width: 15%;
+    text-align: end;
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin-right: 2%;
+}
+
+.setGenderSelect{
+    width: 20%;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 1.2rem;
+    background-color: #fff;
+}
+.setGenderSelect:hover{
+    cursor: pointer;
+}
+.setGenderSelect:focus{
+    outline: none;
+    cursor: pointer;
+}
+.setName input , .setUsername input{
+    display: none;
+}
+.setName input:focus , .setUsername input:focus{
+    outline: none;
+}
+.setName i:hover , .setUsername i:hover{
+    cursor: pointer;
+}
+
+.setUserIconContent{
+    margin-top: 20px;
+    text-align: center;
+    display: none;
+}
+
+.setUserIconContent img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+.setUserIconContent input{
+    font-size: 1.2rem;
+}
+.saveChangesDiv{
+    text-align: center;
+}
+.saveChangesBtn{
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    font-size: 1.2rem;
+    padding: 1.2rem;
+}
+.saveChangesBtn:hover{
+    background-color: yellow;
+    color: black;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+@media screen and (max-width: 1000px) {
+    html {
+      font-size: 9px;
+    }
+   
+  }
+  @media only screen and (max-width: 700px) {
+    html {
+      font-size: 6px;
+    }
+    
+  }
+  @media screen and (max-width: 550px) {
+    html {
+      font-size: 5px;
+    }
+    
+  }
+  
