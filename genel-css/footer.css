@@ -2,18 +2,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Chokokutai&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chokokutai&family=Jolly+Lodger&family=Modak&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css");
-.footer {
-  margin-top: 5rem;
-  padding: 2rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  background-color: rgb(63, 62, 62);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 1.3rem;
-  color: white;
+
+
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.footer{
+    bottom: 0;
+    padding: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: rgb(63, 62, 62);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.3rem;
+    color: white;
+
 }
 
 .footerLearnify {
@@ -70,3 +78,27 @@ a {
 #youtubeIcon:hover {
   background-color: red;
 }
+
+#youtubeIcon:hover{
+    background-color: red;
+}
+
+@media screen and (max-width: 1000px) {
+    html {
+      font-size: 9px;
+    }
+    
+  }
+  @media only screen and (max-width: 700px) {
+    html {
+      font-size: 6px;
+    }
+    
+  }
+  @media screen and (max-width: 550px) {
+    html {
+      font-size: 5px;
+    }
+  }
+  
+

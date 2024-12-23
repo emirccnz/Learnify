@@ -2,109 +2,106 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learnify</title>
-    <link rel="stylesheet" href="/genel-css/header.css">
-    <link rel="stylesheet" href="/genel-css/footer.css">
-    <link rel="stylesheet" href="soru.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learnify</title>
+  <link rel="stylesheet" href="/genel-css/header.css">
+  <link rel="stylesheet" href="/genel-css/footer.css">
+  <link rel="stylesheet" href="soru.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="left-side">
-          <a href="../Giris-Ekrani/giris-ekrani.html">
-            <img src="../images/ödevboxicon.png" alt="Learnify" />
-          </a>
-          <h3>learnify</h3>
-        </div>
-        <div class="input-container">
-          <i class="fa-solid fa-magnifying-glass icon"></i>
-          <input
-            class="search-input"
-            type="search"
-            placeholder="Herhangi bir soru arayabilirsin..."
-          />
-        </div>
-        <div class="right-side">
-          <a href="#"> <span class="button-text">soru sor</span></a>
-          <span class="icons">
-            <i class="fa-regular fa-bell"></i>
-          </span>
-          <span class="icons">
-            <i class="fa-regular fa-user"></i>
-          </span>
-        </div>
-      </header>
+  <header>
+    <div class="left-side">
+      <a href="../Giris-Ekrani/giris-ekrani.html">
+        <img src="../images/ödevboxicon.png" alt="Learnify" />
+      </a>
+      <h3>learnify</h3>
+    </div>
+    <div class="input-container">
+      <i class="fa-solid fa-magnifying-glass icon"></i>
+      <input class="search-input" type="search" placeholder="Herhangi bir soru arayabilirsin..." />
+    </div>
+    <div class="right-side">
+      <a href="#"> <span class="button-text">soru sor</span></a>
+      <span class="icons">
+        <i class="fa-regular fa-bell"></i>
+      </span>
+      <span class="icons">
+        <i class="fa-regular fa-user"></i>
+      </span>
+    </div>
+  </header>
 
-      <div class="container" >
-        <div class="box">
-            <h2 style="font-size: 2rem; margin-bottom: 10px; color: white; display: inline-block;">Soru Sor</h2>
-        <div class="ic"> 
-            <input type="text" id="questionInput" placeholder="Sorunuzu buraya yazın...">
-        </div>
+  <div class="container">
+    <div class="box">
+      <h2 style="font-size: 2rem; margin-bottom: 10px; color: white; display: block;">Soru Sor</h2>
+      <textarea id="questionInput" placeholder="Sorunuzu buraya yazın..."></textarea>
+      <div class="links">
         <div class="symbol">
-            <a href="#"><i class="fa-solid fa-paperclip"></i></a>
+          <a href="#"><i class="fa-solid fa-paperclip"></i></a>
         </div>
         <button>Soruyu Gönder</button>
-        <div class="dropdown">
-            <button class="dropdown-btn">Konu Seç</button>
-            <div class="dropdown-content">
-                <a href="#">İngilizce</a>
-                <a href="#">Matematik</a>
-                <a href="#">Türkçe</a>
-                <a href="#">Tarih</a>
-            </div>
+        <div class="dropdown  dd1">
+          <button class="dropdown-btn"><p style="display: inline;" id="lessonP">İngilizce   </p> <i class="fa-solid fa-caret-down"></i></button>
+          <div class="dropdown-content ddc1">
+            <a href="" class="clickableContent">İngilizce</a>
+            <a href="" class="clickableContent">Matematik</a>
+            <a href="" class="clickableContent">Türkçe</a>
+            <a href="" class="clickableContent">Tarih</a>
+          </div>
+          
+          
         </div>
-        <div class="dropdown">
-            <button class="dropdown-btn" style="margin-left: 6px;">Puan</button>
-            <div class="dropdown-content">
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">6</a>
-                <a href="#">7</a>
-                <a href="#">8</a>
-                <a href="#">9</a>
-                <a href="#">10</a>
-            </div>
+        <div class="dropdown dd2">
+          <button class="dropdown-btn" style="margin-left: 6px;"><p style="display: inline;" id="pointP">10   </p><i class="fa-solid fa-caret-down"></i></button>
+          <div class="dropdown-content ddc2">
+            <a href="" class="clickableContent">10</a>
+            <a href="" class="clickableContent">15</a>
+            <a href="" class="clickableContent">20</a>
+            <a href="" class="clickableContent">25</a>
+            <a href="" class="clickableContent">30</a>
+            <a href="" class="clickableContent">35</a>
+            <a href="" class="clickableContent">40</a>
+            <a href="" class="clickableContent">45</a>
+            <a href="" class="clickableContent">50</a>
+          </div>
         </div>
-    <div class="question">
-        <a href="#"><i class="fa-solid fa-circle-question"></i>75 puanın var</a>
-    </div> 
-        </div>
-        <div class="DersLogosu">
-            <img src="/images/education-graduation-academic-logo-academy-school-1625160-pxhere.com.jpg" alt="Ders Logosu">
-            <h1 style="margin-top: -4rem;font-size: 3rem; text-align: center;">Sor,Öğren,Paylaş!</h1>
+        <div class="question">
+          <a href="#"><i class="fa-solid fa-circle-question" style="font-size: 2rem;"></i>75 puanın var</a>
         </div>
       </div>
-      <footer class="footer">
-        <div class="footerLearnify">
-            <a href="giris-ekrani.html"><img src="/images/ödevboxicon.png" alt="icon"></a>
-            <h3>Learnify</h3>
-        </div>
-        <div class="aLinks">
-            <a href="" class="footerLinks">Basında</a>
-            <a href="" class="footerLinks">Güvenlik</a>
-            <a href="" class="footerLinks">Yasal</a>
-            <a href="" class="footerLinks">Hizmet Şartları</a>
-            <a href="" class="footerLinks">Gizlilik Politikası</a>
-            <a href="" class="footerLinks">Destek</a>
-            <a href="" class="footerLinks">E-Verify</a>
-            <a href="" class="footerLinks">Erişilebilirlik</a>
-        </div>
-        <div class="socialMediaLinks">
-            <a href="instagram.com"><i class="fa-brands fa-instagram" id="instagramIcon"></i></a>
-            <a href="facebook.com"><i class="fa-brands fa-facebook" id="facebookIcon"></i></a>
-            <a href="linkedin.com"><i class="fa-brands fa-linkedin" id="linkedinIcon"></i></a>
-            <a href="x.com"><i class="fa-brands fa-x-twitter" id="twitterIcon"></i></a>
-            <a href="youtube.com"><i class="fa-brands fa-youtube" id="youtubeIcon"></i></a>
-        </div>
-    </footer>
-    
+
+    </div>
+    <div class="DersLogosu">
+      <img src="/images/education-graduation-academic-logo-academy-school-1625160-pxhere.com.jpg" alt="Ders Logosu">
+      <h1 style="margin-top: -4rem;font-size: 3rem; text-align: center;">Sor,Öğren,Paylaş!</h1>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footerLearnify">
+      <a href="giris-ekrani.html"><img src="/images/ödevboxicon.png" alt="icon"></a>
+      <h3>Learnify</h3>
+    </div>
+    <div class="aLinks">
+      <a href="" class="footerLinks">Basında</a>
+      <a href="" class="footerLinks">Güvenlik</a>
+      <a href="" class="footerLinks">Yasal</a>
+      <a href="" class="footerLinks">Hizmet Şartları</a>
+      <a href="" class="footerLinks">Gizlilik Politikası</a>
+      <a href="" class="footerLinks">Destek</a>
+      <a href="" class="footerLinks">E-Verify</a>
+      <a href="" class="footerLinks">Erişilebilirlik</a>
+    </div>
+    <div class="socialMediaLinks">
+      <a href="instagram.com"><i class="fa-brands fa-instagram" id="instagramIcon"></i></a>
+      <a href="facebook.com"><i class="fa-brands fa-facebook" id="facebookIcon"></i></a>
+      <a href="linkedin.com"><i class="fa-brands fa-linkedin" id="linkedinIcon"></i></a>
+      <a href="x.com"><i class="fa-brands fa-x-twitter" id="twitterIcon"></i></a>
+      <a href="youtube.com"><i class="fa-brands fa-youtube" id="youtubeIcon"></i></a>
+    </div>
+  </footer>
 
 
 
@@ -128,7 +125,8 @@
 
 
 
-    <script type="module" src="soru.js"></script>
+
+  <script src="soru.js"></script>
 </body>
 
 </html>
