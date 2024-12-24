@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="/images/ödevboxicon.png"
+      href="../images/ödevboxicon.png"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="../genel-css/header.css" />
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Learnify</title>
   </head>
-  <body>
+  <body id="body">
     <header>
       <div class="left-side">
         <a href="../Giris-Ekrani/giris-ekrani.html">
@@ -30,8 +30,10 @@
         />
       </div>
       <div class="right-side">
-        <a href="#"> <span class="button-text">soru sor</span></a>
-        <span class="icons">
+        <a href="../Soru/soru.html">
+          <span class="button-text">soru sor</span></a
+        >
+        <span class="icons notification-icon">
           <i class="fa-regular fa-bell"></i>
         </span>
         <span class="icons">
@@ -92,6 +94,70 @@
       </nav>
 
       <main class="content">
+        <div class="box">
+          <div class="box-header">
+            <img src="../images/brain.jpg" alt="" />
+            <span>Beyin-Yardımcı</span>
+          </div>
+          <div class="box-content">
+            <div>
+              <p>Ne öğrenmek istersin?</p>
+            </div>
+
+            <div class="selects">
+              <select name="" id="konu-basliklari">
+                <option value="1">Bütün Konular</option>
+                <option value="2">Matematik</option>
+                <option value="3">Türkçe</option>
+                <option value="4">Yazılım</option>
+                <option value="5">Fizik</option>
+                <option value="6">Tarih</option>
+                <option value="7">İngilizce</option>
+              </select>
+
+              <select name="" id="level">
+                <option value="1">Tüm seviyeler</option>
+                <option value="2">İlkokul</option>
+                <option value="3">Ortaokul</option>
+                <option value="4">Lise</option>
+                <option value="5">Üniversite+</option>
+              </select>
+
+              <select name="" id="cevaplar">
+                <option value="1">Bütün</option>
+                <option value="2">Çözülmemiş</option>
+                <option value="3">Çözülmüş</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="selects-part2">
+          <select class="select-mini" id="konu-basliklari  ">
+            <option value="1">Bütün Konular</option>
+            <option value="2">Matematik</option>
+            <option value="3">Türkçe</option>
+            <option value="4">Yazılım</option>
+            <option value="5">Fizik</option>
+            <option value="6">Tarih</option>
+            <option value="7">İngilizce</option>
+          </select>
+
+          <select class="select-mini" name="" id="level ">
+            <option value="1">Tüm seviyeler</option>
+            <option value="2">İlkokul</option>
+            <option value="3">Ortaokul</option>
+            <option value="4">Lise</option>
+            <option value="5">Üniversite+</option>
+          </select>
+
+          <select class="select-mini" name="" id="cevaplar">
+            <option value="1">Bütün</option>
+            <option value="2">Çözülmemiş</option>
+            <option value="3">Çözülmüş</option>
+          </select>
+        </div>
+
         <div class="quest">
           <div class="content-header">
             <div class="profile">
@@ -429,9 +495,9 @@
         </ul>
       </aside>
 
-      <section class="add-questions">
-        <a href="../Soru/soru.html">
-          <i class="fa-solid fa-plus"></i>
+      <section class="scroll-top">
+        <a href="#body">
+          <i class="fas fa-angle-up"></i>
         </a>
       </section>
     </div>
