@@ -5,6 +5,7 @@ header {
   background-color: #38587e;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 .left-side {
