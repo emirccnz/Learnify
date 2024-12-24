@@ -6,7 +6,11 @@
 *{
     margin: 0;
     padding: 0;
-   
+}
+body{
+    background-image: url(/images/back.jpg);
+    background-position: center;
+    background-size: cover;
 }
 html{
     font-size: 10px;
