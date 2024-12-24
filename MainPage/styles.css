@@ -12,6 +12,13 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url(../images/paper-texture.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 html {
   font-size: 9px;
   font-family: "ProximaNova", "Helvetica", "Arial", sans-serif;
@@ -22,6 +29,10 @@ html {
   justify-content: space-around;
   width: 100%;
   padding-top: 7%;
+}
+
+.side-bar {
+  background-color: #fff;
 }
 
 .nav-bar {
@@ -142,6 +153,7 @@ html {
   border: 2px solid #e0e0e0;
   height: 30rem;
   margin-bottom: 2rem;
+  background-color: #fff;
 }
 
 .content-header {
@@ -223,6 +235,26 @@ html {
   font-size: 1.4rem;
   position: absolute;
   left: 3rem;
+}
+
+.add-questions {
+  font-size: 3rem;
+  background-color: #7295c0;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.add-questions:hover {
+  background-color: #2b4360;
+  border-radius: 50%;
+}
+
+.add-questions i {
+  padding: 5px;
+  color: #fff;
+  transition: color 0.6ss;
 }
 
 @media screen and (max-width: 1000px) {
