@@ -17,109 +17,6 @@ html {
   font-family: "ProximaNova", "Helvetica", "Arial", sans-serif;
 }
 
-header {
-  background-color: #2b4360;
-  height: 7rem;
-  width: 100%;
-}
-
-.header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  position: fixed;
-  z-index: 1;
-}
-
-.header-left-side {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0.5rem;
-}
-
-.header-left-side h3 {
-  margin-left: 4rem;
-  text-transform: uppercase;
-  font-size: 2.5rem;
-  font-weight: 500;
-  color: #fff;
-  font-style: italic;
-  text-transform: capitalize;
-  font-family: "Ubuntu", sans-serif;
-}
-
-.header-left-side img {
-  width: 5rem;
-  height: 5rem;
-}
-
-.header-mid-side {
-  position: relative;
-  display: inline-block;
-  width: 50%;
-}
-
-.search-input {
-  width: 100%;
-  padding: 1.5rem;
-  height: 0.4rem;
-  font-size: 1.2rem;
-  border: 2px solid gray;
-  border-radius: 1.2rem;
-  box-sizing: border-box;
-  outline: none;
-}
-
-.header-mid-side .icon {
-  position: absolute;
-  right: 0.1rem;
-  top: 1.6rem;
-  transform: matrix(1, 0, 0, 1, 0, -16);
-  transform: translateY(-50%);
-  font-size: 1.8rem;
-  pointer-events: none;
-  margin-right: 1rem;
-  color: grey;
-}
-
-.header-right-side a {
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.button-text {
-  color: #fff;
-  font-size: 1.5rem;
-  font-family: "Roboto Condensed", sans-serif;
-  height: 3rem;
-  font-weight: 700;
-  width: 8rem;
-  background-color: #2b4360;
-  text-align: center;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  padding: 1rem;
-  margin-right: 2rem;
-}
-
-.button-text:hover {
-  color: #2b4360;
-  background-color: #fff;
-  border: 1px solid #2b4360;
-  border-radius: 5px;
-  transition: 0.5;
-  font-weight: 700;
-}
-
-.header-right-side-icon {
-  font-size: 2rem;
-  cursor: pointer;
-  text-align: center;
-  margin: 1.5rem;
-  color: #fff;
-}
-
 .container {
   display: flex;
   justify-content: space-around;
@@ -137,7 +34,7 @@ header {
 
 .nav-bar h3 {
   margin-top: 4rem;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   text-align: left;
   margin-bottom: 0.8rem;
@@ -157,9 +54,10 @@ header {
 }
 
 .nav-bar-item {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
 }
 
 .nav-bar-items-icon {
@@ -200,6 +98,8 @@ header {
   display: inline-block;
   padding: 0 36px 0 16px;
   margin: 8px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .side-bar-items {
@@ -240,7 +140,8 @@ header {
   border-radius: 8px;
   overflow: hidden;
   border: 2px solid #e0e0e0;
-  height: 23rem;
+  height: 30rem;
+  margin-bottom: 2rem;
 }
 
 .content-header {
@@ -258,14 +159,15 @@ header {
 .content-header .profile img {
   border-radius: 50%;
   object-fit: cover;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 .content-header .profile span {
   font-weight: bold;
   color: #333;
   margin-left: 1rem;
+  font-size: 1.4rem;
 }
 
 .content-header .konu {
@@ -281,6 +183,10 @@ header {
   align-items: center;
 }
 
+.questions p {
+  font-size: 1.4rem;
+}
+
 .answer {
   padding: 15px;
   display: flex;
@@ -294,15 +200,17 @@ header {
   background-color: #2b4360;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 7px;
   cursor: pointer;
   font-size: 1.4rem;
+  border: 2px solid #fff;
 }
 
 .answer button:hover {
   background-color: #fff;
   color: #2b4360;
   transition: 0.5s;
+  border: 2px solid #2b4360;
 }
 
 .answer i {
