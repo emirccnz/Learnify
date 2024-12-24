@@ -9,114 +9,319 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-  font-size: 10px;
+  font-size: 9px;
   font-family: "ProximaNova", "Helvetica", "Arial", sans-serif;
 }
+
 header {
+  background-color: #2b4360;
+  height: 7rem;
+  width: 100%;
+}
+
+.header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #2b4360;
+  position: fixed;
+  z-index: 1;
 }
 
-.left-side {
-  margin: 5px;
-  margin-left: 5%;
+.header-left-side {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.left-side h3 {
-  font-size: 2.5rem;
-  margin: 1rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #fff;
+  margin: 0.5rem;
 }
 
-.left-side img {
+.header-left-side h3 {
+  margin-left: 4rem;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #fff;
+  font-style: italic;
+  text-transform: capitalize;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.header-left-side img {
   width: 5rem;
   height: 5rem;
 }
 
-.input-container {
-  width: 50%;
-  display: inline-block;
+.header-mid-side {
   position: relative;
-}
-
-.input-container input {
-  height: 40px;
-  width: 100%;
-  margin-left: 2rem;
+  display: inline-block;
+  width: 50%;
 }
 
 .search-input {
   width: 100%;
-  padding: 0.8rem;
-  height: 40px;
-  font-size: 1.6rem;
+  padding: 1.5rem;
+  height: 0.4rem;
+  font-size: 1.2rem;
   border: 2px solid gray;
-  border-radius: 12px;
+  border-radius: 1.2rem;
   box-sizing: border-box;
-  font: inherit;
+  outline: none;
 }
 
-.input-container .icon {
+.header-mid-side .icon {
   position: absolute;
-  right: 1px;
+  right: 0.1rem;
+  top: 1.6rem;
   transform: matrix(1, 0, 0, 1, 0, -16);
-  top: 2rem;
   transform: translateY(-50%);
   font-size: 1.8rem;
   pointer-events: none;
+  margin-right: 1rem;
+  color: grey;
 }
 
-.right-side a {
+.header-right-side a {
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .button-text {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 1.5rem;
   color: #fff;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-left: 4rem;
+  font-size: 1.5rem;
+  font-family: "Roboto Condensed", sans-serif;
   height: 3rem;
+  font-weight: 700;
   width: 8rem;
   background-color: #2b4360;
-  padding: 1rem;
-  font-weight: bold;
   text-align: center;
-  margin-right: 1rem;
-  margin-left: 2rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-right: 2rem;
 }
 
 .button-text:hover {
+  color: #2b4360;
+  background-color: #fff;
+  border: 1px solid #2b4360;
+  border-radius: 5px;
+  transition: 0.5;
+  font-weight: 700;
+}
+
+.header-right-side-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  text-align: center;
+  margin: 1.5rem;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 7%;
+}
+
+.nav-bar {
+  width: 20%;
+  order: -1;
+  margin-left: 2rem;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.nav-bar h3 {
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid grey;
+}
+
+.nav-bar-items {
+  list-style: none;
+  margin-top: 1.2rem;
+  margin-left: 2rem;
+}
+
+.nav-bar-item a {
+  text-decoration: none;
+  color: black;
+  margin-left: 1.3rem;
+}
+
+.nav-bar-item {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.nav-bar-items-icon {
+  cursor: pointer;
+}
+
+.side-bar {
+  width: 20%;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 2px solid #ebf2f7;
+  border-radius: 8px;
+  height: 35rem;
+}
+
+.side-bar-title {
+  display: flex;
+  align-items: center;
+}
+
+.side-bar-title .icon {
+  font-size: 1.6rem;
+  color: #c98600;
+  margin-right: 8px;
+}
+
+.side-bar h3 {
+  font-size: 1.8rem;
+  width: 90%;
+}
+
+#side-bar-select {
+  font-size: 1.6rem;
+  width: 100%;
+  border: 2px solid #ebf2f7;
+  border-radius: 20px;
+  height: 4rem;
+  display: inline-block;
+  padding: 0 36px 0 16px;
+  margin: 8px;
+}
+
+.side-bar-items {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.side-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.side-bar-item img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.side-bar-item .user-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.side-bar-item .score {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.quest {
+  max-width: 60rem;
+  box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #e0e0e0;
+  height: 23rem;
+}
+
+.content-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-header .profile {
+  display: flex;
+  align-items: center;
+}
+
+.content-header .profile img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 3rem;
+  height: 3rem;
+}
+
+.content-header .profile span {
+  font-weight: bold;
+  color: #333;
+  margin-left: 1rem;
+}
+
+.content-header .konu {
+  font-size: 1.4rem;
+  color: #777;
+}
+
+.questions {
+  padding: 15px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.answer {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.answer button {
+  padding: 8px 16px;
+  background-color: #2b4360;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.answer button:hover {
   background-color: #fff;
   color: #2b4360;
   transition: 0.5s;
-  font-weight: bold;
 }
 
-.icons {
-  font-size: 2rem;
-  text-align: center;
-  margin: 15px;
-  cursor: pointer;
-  color: #fff;
+.answer i {
+  color: #c98600;
+  font-size: 1.4rem;
+}
+
+.points {
+  color: #555;
+  font-size: 1.4rem;
+  position: absolute;
+  left: 3rem;
 }
 
 @media screen and (max-width: 1000px) {
   html {
-    font-size: 9px;
+    font-size: 8px;
   }
-  .left-side h3 {
+  .header-left-side h3 {
     display: none;
   }
 }
@@ -124,15 +329,16 @@ header {
   html {
     font-size: 6px;
   }
-  .input-container input {
-    height: 28px;
+  .header-mid-side .icon {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 550px) {
   html {
     font-size: 5px;
+    top: 2.5rem;
   }
-  .icon {
+  .header-mid-side .icon {
     display: none;
   }
 }

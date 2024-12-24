@@ -36,7 +36,7 @@ async function changeLessonsToRight(){
     await moveLessons(counter,"-15rem")
     getLessonsBox.children[counter].style.display = "none";
     if(counter == 0){
-        counter = 4;
+        counter = 7;
     }
     counter -=1;
     getLessonsBox.children[counter].style.transform = "translateX(+15rem)"
@@ -49,7 +49,7 @@ async function changeLessonsToRight(){
 async function changeLessonsToLeft(){
     await moveLessons(counter,"+15rem")
     getLessonsBox.children[counter].style.display = "none";
-    if(counter == 3){
+    if(counter == 6){
         counter = -1;
     }
     counter +=1;
