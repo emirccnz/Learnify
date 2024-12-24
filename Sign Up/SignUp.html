@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/ödevboxicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/genel-css/header.css">
+    <link rel="stylesheet" href="/genel-css/footer.css">
+    <link rel="stylesheet" href="SignUp.css">
+    <script type="module" src="SignUp.js"></script>
+    <title>Kayıt Ol</title>
+</head>
+<body>
+    <header>
+        <div class="left-side">
+          <a href="../Giris-Ekrani/giris-ekrani.html">
+            <img src="../images/ödevboxicon.png" alt="Learnify" />
+          </a>
+          <h3>learnify</h3>
+        </div>
+        <div class="input-container">
+          <i class="fa-solid fa-magnifying-glass icon"></i>
+          <input
+            class="search-input"
+            type="search"
+            placeholder="Herhangi bir soru arayabilirsin..."
+          />
+        </div>
+        <div class="right-side">
+          <a href="#"> <span class="button-text">soru sor</span></a>
+          <span class="icons">
+            <i class="fa-regular fa-bell"></i>
+          </span>
+          <span class="icons">
+            <i class="fa-regular fa-user"></i>
+          </span>
+        </div>
+      </header>
+<div class="home">
+<div class="SignUp-container">
+    <form action="SignUp" class="signupform">
+          <h2>KAYIT OLUN</h2>
+       <div class="form-group">
+        <label for="Ad">Ad : </label>
+        <input type="text" name="Ad" id="Ad" required>
+       </div>
+
+      <div class="form-group">
+        <label for="Soyad">Soyad : </label>
+        <input type="text" name="Soyad" id="Soyad" required>
+      </div>
+      <div class="form-group">
+          <label for="E-Mail">E-Mail : </label>
+          <input type="email" name="email" id="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Şifre : </label>
+        <input type="password" name="password" id="password" required>
+        <div class="pDiv">
+            <p>En az 8 karakter: <span id="length" class="invalid"></span></p>
+            <p>En az bir Küçük harf: <span id="lowercase" class="invalid"></span></p>
+            <p>En az bir Büyük harf: <span id="uppercase" class="invalid"></span></p>
+            <p>En az bir Rakam: <span id="number" class="invalid"></span></p>
+        </div>
+        <br>
+        <p id="error-message" class="error-message" style="display: none;">Şifre Henüz Uygun Değil !!</p>
+     </div>
+    
+    
+      <div class="form-group">
+        <label for="Doğumtarihi">Doğum Tarihi : </label>
+        <input type="date">
+      </div>
+
+      <div class="setEducationalStatusDiv">
+        <label for="ÖğrenimDurumu">Öğrenim Durumu : </label>
+        <select class="setGenderSelect">
+            <option value="0">Seviye seçilmedi.</option>
+            <option value="1">İlkokul</option>
+            <option value="2">Ortaokul</option>
+            <option value="3">Lise</option>
+            <option value="4">Üniversite+</option>
+        </select>
+       </div>
+
+       <div class="checkbox-container">
+        <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+        <label for="privacy-policy">
+            Gizlilik Politikasını Kabul Ediyorum. <a href="https://eodev.com/pages/privacy_policy">Gizlilik Politikası</a>
+        </label>
+    </div>
+
+      <button type="submit" class="SignUp-button">KAYIT OL</button>
+    </form>
+</div>
+</div>
+
+
+<footer class="footer">
+    <div class="footerLearnify">
+        <a href="giris-ekrani.html"><img src="/images/ödevboxicon.png" alt="icon"></a>
+        <h3>Learnify</h3>
+    </div>
+    <div class="aLinks">
+        <a href="" class="footerLinks">Basında</a>
+        <a href="" class="footerLinks">Güvenlik</a>
+        <a href="" class="footerLinks">Yasal</a>
+        <a href="" class="footerLinks">Hizmet Şartları</a>
+        <a href="" class="footerLinks">Gizlilik Politikası</a>
+        <a href="" class="footerLinks">Destek</a>
+        <a href="" class="footerLinks">E-Verify</a>
+        <a href="" class="footerLinks">Erişilebilirlik</a>
+    </div>
+    <div class="socialMediaLinks">
+        <a href="instagram.com"><i class="fa-brands fa-instagram" id="instagramIcon"></i></a>
+        <a href="facebook.com"><i class="fa-brands fa-facebook" id="facebookIcon"></i></a>
+        <a href="linkedin.com"><i class="fa-brands fa-linkedin" id="linkedinIcon"></i></a>
+        <a href="x.com"><i class="fa-brands fa-x-twitter" id="twitterIcon"></i></a>
+        <a href="youtube.com"><i class="fa-brands fa-youtube" id="youtubeIcon"></i></a>
+    </div>
+  </footer>
+
+    
+</body>
+</html>

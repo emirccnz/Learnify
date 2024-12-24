@@ -101,3 +101,25 @@ header {
   cursor: pointer;
   color: #fff;
 }
+
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 9px;
+  }
+  
+}
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 6px;
+  }
+  .left-side h3{
+    display: none;
+  }
+  
+}
+@media screen and (max-width: 550px) {
+  html {
+    font-size: 5px;
+  }
+}

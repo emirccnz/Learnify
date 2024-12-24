@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Jolly+Lodger&family=Modak&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(/images/back.jpg);
+    background-position: center;
+    background-size: cover;
+}
+html{
+    font-size: 10px;
+    font-family: "ProximaNova", "Helvetica", "Arial", sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Ubuntu", sans-serif;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding-top: 5%;
+}
+.SignUp-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    height: 85%;
+}
+.SignUp-container h2 {
+    width: 100%;
+    font-style: unset;
+    color: black;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.signupform{
+    width: 40%;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+.form-group label {
+    width: 70%;
+    display: block;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    color: black;
+    font-size: 2rem;
+    text-align: left;
+}
+label{
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: black;
+    font-size: 2rem;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+}
+.checkbox-container input{
+    margin-right: 10px;
+}
+.checkbox-container label{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.checkbox-container a {
+    text-decoration: none;
+    color: #0066cc;
+}
+.form-group input {
+    width: 70%;
+    margin-bottom: 0.7rem;
+    padding-bottom: 1rem;
+    border: 0.2rem solid black;
+    border-radius: 4rem;
+    padding-right: 0.1rem;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+p{
+    color: black;
+    font-size: 1.2rem;
+    padding-bottom: 0.1rem;
+    margin-left: 1rem;
+}
+.pDiv{
+    width: 70%;
+    text-align: left;
+}
+.valid, .invalid {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 10px;
+}
+.valid {
+    background-color: green;
+    border-radius: 50%;
+}
+.invalid {
+    background-color: red;
+    border-radius: 50%;
+}
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+.SignUp-button {
+    background-color: #007bff;
+    color: white;
+    border: 0.1rem solid black;
+    padding: 1.5rem ;
+    cursor: pointer;
+    border-radius: 5rem;
+    width: 40%;
+    margin-right: 2rem;
+    font-size: 2rem;
+}
+.SignUp-button:hover {
+    background-color: greenyellow;
+    transition: 0.4s;
+}
+.setEducationalStatusDiv{
+    margin-bottom: 4rem;
+    text-align: left;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.setEducationalStatusDiv label{
+    width: 74%;
+    text-align: left;
+    font-size: 1.5rem;
+}
+.setGenderSelect {
+    font-size: 1.5rem; 
+    color: black; 
+    background-color: #f0f8ff; 
+    padding: 9px 12px; 
+    border-radius: 2rem; 
+    border: 0.1rem solid #4682b4; 
+    transition: background-color 0.4s ease; 
+    width: 74%;
+    
+  }
+  
+  .setGenderSelect:hover {
+    background-color: #007bff; 
+    cursor: pointer; 
+  }
+  
+@media screen and (max-width:900px) {
+    html{
+        font-size: 8px;
+    }
+    .signupform{
+        width: 60%;
+    }
+}
+@media only screen and (max-width:700px) {
+    html{
+        font-size: 6px;
+    }
+    
+}
+@media screen and (max-width:550px){
+    html{
+        font-size: 5px;
+    }
+    
+}
