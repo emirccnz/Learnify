@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Jolly+Lodger&family=Modak&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 10px;
+    font-family: "ProximaNova", "Helvetica", "Arial", sans-serif;
+}
+.answer{
+    display: none;
+}
+.replyContainer{
+    padding-top: 5%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quest {
+    max-width: 50rem;
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #e0e0e0;
+    height: 40rem;
+    margin-right: 20px;
+  }
+  
+  .content-header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .content-header .profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .content-header .profile img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .content-header .profile span {
+    font-weight: bold;
+    color: #333;
+    margin-left: 1rem;
+    font-size: 1.4rem;
+  }
+  
+  .content-header .konu {
+    font-size: 1.4rem;
+    color: #777;
+  }
+  
+  .questions {
+    padding: 15px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .questions p {
+    font-size: 1.4rem;
+  }
+  
+
+  .reply{
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #e0e0e0;
+    height: 40rem;
+  }
+  .replies{
+    padding: 15px;
+    border-top: 1px solid #e0e0e0;
+  }
+  .replyText{
+    font-family: "ProximaNova", "Helvetica", "Arial", sans-serif;
+    height: 27rem;
+    width: 44rem;
+    outline: none;
+    resize: none;
+    border: none;
+    background-color: #ebf2f7;
+    padding: 1.4rem;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    border-radius: 7px;
+  }
+  .buttonDiv{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .send{
+    text-align: center;
+    padding: 1.5rem;
+    width: 25%;
+    background-color: #38587e;
+    color: white;
+    border-radius: 2px;
+    border: 1.5px solid #38587e;
+    font-size: 1.4rem;
+  }
+  .send:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #38587e;
+    transition: 0.4s;
+  }
+  @media screen and (max-width:900px) {
+    html{
+        font-size: 8px;
+    }
+}
+@media only screen and (max-width:700px) {
+    html{
+        font-size: 6px;
+    }
+
+    .replyContainer{
+        flex-direction: column;
+    }
+    .quest{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width:550px){
+    html{
+        font-size: 5px;
+    }
+}
