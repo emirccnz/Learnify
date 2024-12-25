@@ -4,7 +4,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learnify</title>
+    <link rel="shortcut icon" href="/images/ödevboxicon.png" type="image/x-icon">
+    <title>Soru Sor</title>
     <link rel="stylesheet" href="/genel-css/header.css" />
     <link rel="stylesheet" href="/genel-css/footer.css" />
     <link rel="stylesheet" href="soru.css" />
@@ -32,7 +33,7 @@
           <i class="fa-regular fa-bell"></i>
         </span>
         <span class="icons">
-          <i class="fa-regular fa-user"></i>
+          <i class="fa-regular fa-user" onclick="location.href = '/Profil/profil.html'"></i>
         </span>
       </div>
     </header>
@@ -55,9 +56,10 @@
         ></textarea>
         <div class="links">
           <div class="symbol">
-            <a href="#"><i class="fa-solid fa-paperclip"></i></a>
-
+            <input type="file" id="fileInput" style="display: none;" accept="image/*">
+            <a href="#"><i class="fa-solid fa-paperclip" id="paperclipIcon"></i></a>
           </div>
+          <button id="fileButton" style="display: none; justify-content: space-between; align-items: center; background-color: white; color: #38587e;"> <img src="" alt="" style="width: 2rem; height: 2rem; object-fit: cover;"> <p style="margin-right: 10px;"></p> <i class="fa-solid fa-x" style="font-size: 1.2rem; color: #38587e;"></i></button>
           <button>Soruyu Gönder</button>
           <div class="dropdown dd1">
             <button class="dropdown-btn">

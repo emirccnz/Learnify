@@ -24,7 +24,7 @@ html {
 
 .box{
     margin-left: 20px;
-    background-color: #ebf2f7;
+    background-color: #38587e;
     padding: 3rem;
     border-radius: 1rem;
     width: 45%;
@@ -33,6 +33,7 @@ html {
 }
 
 #questionInput {
+    font-family: "ProximaNova", "Helvetica", "Arial", sans-serif;
     box-sizing: border-box;
     padding: 2rem;
     padding-bottom: 22rem;
@@ -50,20 +51,21 @@ html {
     border: none;
 }
 button {
-    color: black;
+    color: white;
     padding: 1rem;
-    border: none;
+    border: 0.1rem white solid;
     border-radius: 5px;
     display: inline-block;
     margin-left: 10px;
     font-size: 1.5rem;
-    background-color: white;
+    background-color: #38587e;
 }
 
 button:hover {
-    background-color: greenyellow;
+    background-color: white;
     transition: 0.4s;
-    color: #2b4360;
+    color: #38587e;
+    
     cursor: pointer;
 }
 
@@ -80,16 +82,18 @@ button:hover {
 }
 
 .dropdown-btn {
-    color: black;
+    background-color: #38587e;
+    color: white;
     padding: 1rem;
     border: none;
     border-radius: 8px;
     display: inline;
+    border: 0.1rem solid white;
     margin-left: 6px;
 }
 
 .dropdown-btn:hover {
-    background-color: greenyellow;
+    background-color: white;
     color: #2b4360;
 }
 
@@ -114,7 +118,8 @@ button:hover {
 }
 
 .dropdown-content a:hover {
-    background-color: greenyellow;
+    background-color: #38587e;
+    color: white;
     cursor: pointer;
 }
 
@@ -131,7 +136,7 @@ button:hover {
 }
 
 .symbol i{
-    color: black;
+    color: white;
     display: inline-block;
     margin-left: 1rem;
 }
@@ -139,19 +144,21 @@ button:hover {
 .question{
     font-size:1.7rem;
     display: inline;
+    
 }
 
 .question i{
-    color: black;
+    color: white;
     display: inline-block;
     padding-right: 10px;
     margin-left: 15px;        
 }
 
 .question a{
-    color: black;
+    color: white;
     text-decoration: none;
     margin-left: -2px;
+
 }
 
 .DersLogosu img{

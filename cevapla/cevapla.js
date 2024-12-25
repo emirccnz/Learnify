@@ -8,7 +8,6 @@ function events() {
             
             console.log(selectedQuest)
             getQuestDiv.insertAdjacentHTML("beforebegin",selectedQuest)
-            localStorage.removeItem("selectedQuest")
         }
         getQuestDiv.style.display = "none"
     })

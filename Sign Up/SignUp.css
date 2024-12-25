@@ -16,6 +16,60 @@ html{
     font-size: 10px;
     font-family: "ProximaNova", "Helvetica", "Arial", sans-serif;
 }
+
+header{
+    z-index: 2;
+    display: flex;
+    background-color: #38587e;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+}
+.leftSideH{
+    display: flex;
+    margin: 5px;
+    margin-left: 6%;
+    align-items: center;
+    justify-content: center
+}
+header img{
+    width: 5rem;
+    height: 5rem;
+}
+
+header h1{
+    display: inline;
+    margin-left: 10px;
+    font-size: 2.5rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    color: white;
+}
+.rightSideH{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    margin-right: 40px;
+}
+.rightSideH a button{
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: #38587e;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    height: 3rem;
+    width: 8rem;
+    border: 0;
+    border-radius: 10%;
+    margin-left: 20px;
+}
+
+.rightSideH a button:hover{
+    background-color: white;
+    color: #38587e;
+    transition: 0.5s;
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: "Ubuntu", sans-serif;
 }
@@ -23,8 +77,9 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
-    padding-top: 5%;
+    min-height: 90vh;
+    padding-top:8%;
+    padding-bottom: 20px;
 }
 .SignUp-container {
     display: flex;
@@ -99,6 +154,7 @@ label{
     padding-top: 1rem;
     font-size: 1.5rem;
 }
+
 p{
     color: black;
     font-size: 1.2rem;
@@ -129,9 +185,9 @@ p{
 }
 
 .SignUp-button {
-    background-color: #007bff;
+    background-color: #38587e;
     color: white;
-    border: 0.1rem solid black;
+    border: 0.1rem solid #38587e;
     padding: 1.5rem ;
     cursor: pointer;
     border-radius: 5rem;
@@ -140,7 +196,8 @@ p{
     font-size: 2rem;
 }
 .SignUp-button:hover {
-    background-color: greenyellow;
+    background-color: white;
+    color: #38587e;
     transition: 0.4s;
 }
 .setEducationalStatusDiv{
@@ -164,14 +221,14 @@ p{
     background-color: #f0f8ff; 
     padding: 9px 12px; 
     border-radius: 2rem; 
-    border: 0.1rem solid #4682b4; 
+    border: 0.1rem solid #38587e; 
     transition: background-color 0.4s ease; 
     width: 74%;
     
   }
   
   .setGenderSelect:hover {
-    background-color: #007bff; 
+
     cursor: pointer; 
   }
   

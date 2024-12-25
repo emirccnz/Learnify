@@ -299,17 +299,19 @@ html {
 }
 
 .scroll-top {
-  font-size: 3rem;
+  font-size: 3.5rem;
   background-color: #7295c0;
   border-radius: 50%;
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 2rem;
+  right: 2rem;
 }
 
 .scroll-top:hover {
   background-color: #2b4360;
   border-radius: 50%;
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 .scroll-top i {

@@ -11,21 +11,78 @@ body{
     background-image: url(/images/back.jpg);
     background-position: center;
     background-size: cover;
+    min-height: 100vh;
 }
 html{
     font-size: 10px;
     font-family: "ProximaNova", "Helvetica", "Arial", "sans-serif";
 }
+
+
+header{
+    z-index: 2;
+    display: flex;
+    background-color: #38587e;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+}
+.leftSideH{
+    display: flex;
+    margin: 5px;
+    margin-left: 6%;
+    align-items: center;
+    justify-content: center
+}
+header img{
+    width: 5rem;
+    height: 5rem;
+}
+
+header h1{
+    display: inline;
+    margin-left: 10px;
+    font-size: 2.5rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    color: white;
+}
+.rightSideH{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    margin-right: 40px;
+}
+.rightSideH a button{
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: #38587e;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    height: 3rem;
+    width: 8rem;
+    border: 0;
+    border-radius: 10%;
+    margin-left: 20px;
+}
+
+.rightSideH a button:hover{
+    background-color: white;
+    color: #38587e;
+    transition: 0.5s;
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: "Ubuntu", sans-serif;
 }
 .container{
-    padding-top: 5%;
+    flex-grow: 1;
+    min-height: 80vh;
+    padding-top: 8%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
 }
 .home{
     width: 100%;
@@ -36,7 +93,6 @@ h1, h2, h3, h4, h5, h6 {
 .container h2 {
     margin-top: 20px;
     width: 100%;
-    height: 10vh;
     font-style: unset;
     color: black;
     font-size: 3rem;
@@ -190,9 +246,9 @@ p{
     margin-bottom: 1rem;
 }
 .login-button {
-    background-color: #007bff;
+    background-color: #38587e;
     color: #ffffff;
-    border: 0.1rem solid black;
+    border: 0.1rem solid #38587e;
     padding: 3rem 5rem;
     cursor: pointer;
     border-radius: 5rem;
@@ -203,24 +259,25 @@ p{
     font-size: 2rem;
 }
 .login-button:hover {
-    background-color: greenyellow;
+    background-color: #ffffff;
     transition: 0.4s;
+    color: #38587e;
 }
-/* Responsive design for tablets and mobile */
-@media (max-width: 1024px) { /* Tablet view */
+
+@media (max-width: 900px) { 
     .html{
         font-size: 8px;
     }
 }
 
-@media (max-width: 768px) { /* Small tablet/large phone view */
+@media (max-width: 768px) {
     html{
         font-size: 6px;
     }
 
 }
 
-@media (max-width: 480px) { /* Phone view */
+@media (max-width: 480px) {
     html{
         font-size: 5px;
     }
