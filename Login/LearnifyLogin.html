@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="/images/ödevboxicon.png" type="image/x-icon">
   <title>Giriş Yap</title>
-  <link rel="stylesheet" href="/genel-css/header.css">
   <link rel="stylesheet" href="/genel-css/footer.css">
   <link rel="stylesheet" href="Login.css">
   <script type="module" src="Login.js"></script>
@@ -14,25 +13,14 @@
 
 <body>
 
-  <header>
-    <div class="left-side">
-      <a href="../Giris-Ekrani/giris-ekrani.html">
-        <img src="../images/ödevboxicon.png" alt="Learnify" />
-      </a>
-      <h3>learnify</h3>
+  <header class="mainHeader">
+    <div class="leftSideH">
+      <a href="/Giris-Ekrani/giris-ekrani.html "><img src="/images/ödevboxicon.png" alt="odevboxicon"></a>
+      <h1>Learnify</h1>
     </div>
-    <div class="input-container">
-      <i class="fa-solid fa-magnifying-glass icon"></i>
-      <input class="search-input" type="search" placeholder="Herhangi bir soru arayabilirsin..." />
-    </div>
-    <div class="right-side">
-      <a href="#"> <span class="button-text">soru sor</span></a>
-      <span class="icons">
-        <i class="fa-regular fa-bell"></i>
-      </span>
-      <span class="icons">
-        <i class="fa-regular fa-user"></i>
-      </span>
+    <div class="rightSideH">
+      <a href="/Login/LearnifyLogin.html" class="loginBtn"><button>Giriş Yap</button></a>
+      <a href="/Sign Up/SignUp.html" class="signUpBtn"><button>Kayıt Ol</button></a>
     </div>
   </header>
 
@@ -72,10 +60,11 @@
             <label for="password">Şifre : </label>
             <input type="password" name="password" id="password" required>
           </div>
-          <button type="submit" class="login-button">Giriş Yap</button>
+          <button type="submit" class="login-button" onclick="location.href = '/MainPage/indeks.html'">Giriş
+            Yap</button>
         </form>
         <br>
-        <p>Hesabın Yok Mu ? <a href="http://127.0.0.1:5500/Sign%20Up/SignUp.html">Üye Ol</a></p>
+        <p>Hesabın Yok Mu ? <a href="http://127.0.0.1:5500/Sign%20Up/SignUp.html" style="color: #38587e;">Üye Ol</a></p>
       </div>
     </div>
   </div>

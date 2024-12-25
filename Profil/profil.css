@@ -14,7 +14,7 @@ html{
 }
 
 .container{
-  padding-bottom: 5%;
+    padding-bottom: 5%;
     box-sizing: border-box;
     padding-top: 10%;
     display: flex;

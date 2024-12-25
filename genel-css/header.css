@@ -102,6 +102,9 @@ header {
   color: #fff;
 }
 
+a{
+  color: white;
+}
 
 @media screen and (max-width: 1000px) {
   html {

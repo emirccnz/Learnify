@@ -4,17 +4,15 @@ const emailInput = document.getElementById("email");
 
         emailInput.addEventListener("input", function() {
             const emailValue = emailInput.value;
-
-            // E-posta geçerlilik kontrolü: sadece gmail.com veya hotmail.com
             const isValidEmail = /^(.*@gmail\.com|.*@hotmail\.com)$/.test(emailValue);
 
             if (isValidEmail) {
-                emailCheck.textContent = "✔";  // Geçerli mail ise tik işareti
+                emailCheck.textContent = "✔";  
                 emailCheck.className = "valid";
-                errorMessage.style.display = "none"; // Geçerli mail olduğunda hata mesajını gizle
+                errorMessage.style.display = "none"; 
             } else {
-                emailCheck.textContent = "✘";  // Geçersiz mail ise çarpı işareti
+                emailCheck.textContent = "✘";  
                 emailCheck.className = "invalid";
-                errorMessage.style.display = "block"; // Geçersiz mail olduğunda hata mesajını göster
+                errorMessage.style.display = "block"; 
             }
         });
