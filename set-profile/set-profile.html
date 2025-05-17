@@ -34,15 +34,15 @@
         </div>
     </header>
 
-    <div class="container">
+    <form action="set-profile.php" method="post">
         <div class="mainContent" id="mainContent">
-            <h1>Profilini Düzenle</h1>
+                <h1>Profilini Düzenle</h1>
             <div class="setAbout">
                 <h3>Hakkında</h3>
                 <div class="setAboutContent content">
                     <div class="setGenderDiv">
                         <h3>Cinsiyet: </h3>
-                        <select class="setGenderSelect">
+                        <select class="setGenderSelect" name="gender">
                             <option value="0">Belirtmek istemiyorum.</option>
                             <option value="1">Erkek</option>
                             <option value="2">Kız</option>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="setEducationalStatusDiv">
                         <h3>Öğrenim Durumu: </h3>
-                        <select class="setGenderSelect">
+                        <select class="setGenderSelect" name="educationalStatus">
                             <option value="0">Seviye seçilmedi.</option>
                             <option value="1">İlkokul</option>
                             <option value="2">Ortaokul</option>
@@ -60,15 +60,21 @@
                     </div>
                     <div class="setName" id="setNameDiv">
                         <h3>Ad: </h3>
-                        <h3 style="text-align: center;">Emircan Cengiz</h3>
+                        <h3 style="text-align: center;">Emircan</h3>
                         <i class="fa-regular fa-pen-to-square" style="font-size: 1.2rem;"></i>
-                        <input type="text" placeholder="Emircan Cengiz">
+                        <input type="text" placeholder="Emircan" name="name">
+                    </div>
+                    <div class="setName" id="setSurnameDiv">
+                        <h3>Soyad: </h3>
+                        <h3 style="text-align: center;">Cengiz</h3>
+                        <i class="fa-regular fa-pen-to-square" style="font-size: 1.2rem;"></i>
+                        <input type="text" placeholder="Cengiz" name="surname">
                     </div>
                     <div class="setUsername" id="setUsernameDiv">
                         <h3>Takma Ad: </h3>
                         <h3 style="text-align: center;">Emru</h3>
                         <i class="fa-regular fa-pen-to-square" style="font-size: 1.2rem;"></i>
-                        <input type="text" placeholder="Emru">
+                        <input type="text" placeholder="Emru" name="userName">
                     </div>
                 </div>
             </div>
@@ -81,7 +87,7 @@
                     </div>
                     <div>
                         <h3>Yeni Şifre: </h3>
-                        <input type="text">
+                        <input type="text" name="password">
                     </div>
                     <div>
                         <h3>Yeni Şifre Tekrar:</h3>
@@ -98,7 +104,7 @@
                     </div>
                     <div>
                         <h3>Yeni E-mail: </h3>
-                        <input type="text">
+                        <input type="text" name="email">
                     </div>
                 </div>
             </div>
@@ -112,9 +118,11 @@
                     <p style="margin-top: 10px;">Uyarı: En güzel sonuç için fotoğrafınızın boyutu 1:1(kare) oranında olmalıdır.</p>
                 </div>
             </div>
-            <div class="saveChangesDiv"><button class="saveChangesBtn">Değişikliklikleri Kaydet</button></div>
+            <div class="saveChangesDiv"><button class="saveChangesBtn" type="submit">Değişikliklikleri Kaydet</button></div>
+           
         </div>
-    </div>
+    </form>
+    
 
     <footer class="footer">
         <div class="footerLearnify">

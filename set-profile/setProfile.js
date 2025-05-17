@@ -4,6 +4,7 @@ const getSetUsernameDiv = document.getElementById("setUsernameDiv")
 const uploadPhoto = document.getElementById("uploadPhoto")
 const userPhoto = document.getElementById("userPhoto")
 const getSetUserIconDiv = document.getElementById("SetUserIconDiv")
+const getSetSurnameDiv = document.getElementById("setSurnameDiv")
 events()
 
 
@@ -11,10 +12,14 @@ function events(){
     getSetNameDiv.children[2].addEventListener("click", ()=>{
         setName()
     })
+    getSetSurnameDiv.children[2].addEventListener("click", ()=>{
+        setSurname()
+    })
 
     getSetUsernameDiv.children[2].addEventListener("click", ()=>{
         setUserName()
     })
+    
     Array.from(getMainContentDiv.children).forEach(children => {
         children.addEventListener("click",()=>{
             children.children[1].style.display = "flex"
@@ -43,6 +48,12 @@ function setName(){
     getSetNameDiv.children[2].style.display = "none"
     getSetNameDiv.children[1].style.display = "none"
     getSetNameDiv.children[3].style.display = "inline"
+}
+
+function setSurname(){
+    getSetSurnameDiv.children[2].style.display = "none"
+    getSetSurnameDiv.children[1].style.display = "none"
+    getSetSurnameDiv.children[3].style.display = "inline"
 }
 
 function setUserName(){
