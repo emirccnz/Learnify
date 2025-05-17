@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/images/ödevboxicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/genel-css/header.css">
-    <link rel="stylesheet" href="/genel-css/footer.css">
+    <link rel="stylesheet" href="../genel-css/header.css">
+    <link rel="stylesheet" href="../genel-css/footer.css">
     <link rel="stylesheet" href="set-profile.css">
     <title>Learnify</title>
 </head>
 
 <body>
+    <?php include("../genel-php/profil-bilgileri.php"); ?>
     <header>
         <div class="left-side">
             <a href="../MainPage/indeks.html">
@@ -29,46 +30,51 @@
                 <i class="fa-regular fa-bell"></i>
             </span>
             <span class="icons">
-                <i class="fa-regular fa-user" onclick="location.href = '/Profil/profil.html'"></i>
+                <i class="fa-regular fa-user" onclick="location.href = '../Profil/profil.php'"></i>
             </span>
         </div>
     </header>
 
-    <div class="container">
+    <form action="submit.php" method="post" enctype="multipart/form-data">
         <div class="mainContent" id="mainContent">
-            <h1>Profilini Düzenle</h1>
+                <h1>Profilini Düzenle</h1>
             <div class="setAbout">
                 <h3>Hakkında</h3>
                 <div class="setAboutContent content">
                     <div class="setGenderDiv">
                         <h3>Cinsiyet: </h3>
-                        <select class="setGenderSelect">
+                        <select class="setGenderSelect" name="gender">
                             <option value="0">Belirtmek istemiyorum.</option>
-                            <option value="1">Erkek</option>
-                            <option value="2">Kız</option>
+                            <option value="Erkek">Erkek</option>
+                            <option value="Kız">Kız</option>
                         </select>
                     </div>
                     <div class="setEducationalStatusDiv">
                         <h3>Öğrenim Durumu: </h3>
-                        <select class="setGenderSelect">
-                            <option value="0">Seviye seçilmedi.</option>
-                            <option value="1">İlkokul</option>
-                            <option value="2">Ortaokul</option>
-                            <option value="3">Lise</option>
-                            <option value="4">Üniversite+</option>
+                        <select class="setGenderSelect" name="educationalStatus">
+                            <option value="0">İlkokul</option>
+                            <option value="1">Ortaokul</option>
+                            <option value="2">Lise</option>
+                            <option value="3">Üniversite+</option>
                         </select>
                     </div>
                     <div class="setName" id="setNameDiv">
                         <h3>Ad: </h3>
-                        <h3 style="text-align: center;">Emircan Cengiz</h3>
+                        <h3 style="text-align: center;"><?php echo $kullaniciAdi; ?></h3>
                         <i class="fa-regular fa-pen-to-square" style="font-size: 1.2rem;"></i>
-                        <input type="text" placeholder="Emircan Cengiz">
+                        <input type="text" placeholder="<?php echo $kullaniciAdi; ?>" name="name">
+                    </div>
+                    <div class="setName" id="setSurnameDiv">
+                        <h3>Soyad: </h3>
+                        <h3 style="text-align: center;"><?php echo $kullaniciSoyadi; ?></h3>
+                        <i class="fa-regular fa-pen-to-square" style="font-size: 1.2rem;"></i>
+                        <input type="text" placeholder="<?php echo $kullaniciSoyadi; ?>" name="surname">
                     </div>
                     <div class="setUsername" id="setUsernameDiv">
                         <h3>Takma Ad: </h3>
-                        <h3 style="text-align: center;">Emru</h3>
+                        <h3 style="text-align: center;"><?php echo $kullaniciTakmaAdi; ?></h3>
                         <i class="fa-regular fa-pen-to-square" style="font-size: 1.2rem;"></i>
-                        <input type="text" placeholder="Emru">
+                        <input type="text" placeholder="<?php echo $kullaniciTakmaAdi; ?>" name="userName">
                     </div>
                 </div>
             </div>
@@ -81,7 +87,7 @@
                     </div>
                     <div>
                         <h3>Yeni Şifre: </h3>
-                        <input type="text">
+                        <input type="text" name="password">
                     </div>
                     <div>
                         <h3>Yeni Şifre Tekrar:</h3>
@@ -90,7 +96,7 @@
                 </div>
             </div>
             <div class="setEmail">
-                <h3 style="display: flex; justify-content: space-between;">E-mailin <span style="color: gray;">emircngiz005@gmail.com</span></h3>
+                <h3 style="display: flex; justify-content: space-between;">E-mailin <span style="color: gray;"><?php echo $email; ?></span></h3>
                 <div class="setEmailContent content">
                     <div>
                         <h3>Güncel Şifre: </h3>
@@ -98,7 +104,7 @@
                     </div>
                     <div>
                         <h3>Yeni E-mail: </h3>
-                        <input type="text">
+                        <input type="text" name="email">
                     </div>
                 </div>
             </div>
@@ -106,15 +112,17 @@
                 <h3>Fotoğrafın</h3>
                 <div class="setUserIconContent">
                     <h3>Güncel Fotoğrafın</h3>
-                    <img src="/images/IMG-20241215-WA0006.jpg" alt="" id="userPhoto">
+                    <img src="../profile-images/<?php echo $profilFoto; ?>" alt="" id="userPhoto">
                     <br>
-                    <input type="file" accept="image/*" id="uploadPhoto">
+                    <input type="file" accept="image/*" id="uploadPhoto" name="foto">
                     <p style="margin-top: 10px;">Uyarı: En güzel sonuç için fotoğrafınızın boyutu 1:1(kare) oranında olmalıdır.</p>
                 </div>
             </div>
-            <div class="saveChangesDiv"><button class="saveChangesBtn">Değişikliklikleri Kaydet</button></div>
+            <div class="saveChangesDiv"><button class="saveChangesBtn" type="submit">Değişikliklikleri Kaydet</button></div>
+           
         </div>
-    </div>
+    </form>
+    
 
     <footer class="footer">
         <div class="footerLearnify">
@@ -139,7 +147,7 @@
             <a href="youtube.com"><i class="fa-brands fa-youtube" id="youtubeIcon"></i></a>
         </div>
     </footer>
-    <script src="/set-profile/setProfile.js"></script>
+    <script src="setProfile.js"></script>
 </body>
 
 </html>

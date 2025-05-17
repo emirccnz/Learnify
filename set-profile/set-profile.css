@@ -27,6 +27,16 @@ html{
     min-height: 80vh;
     margin-bottom: 2%;
 }
+form{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 80vh;
+    margin-bottom: 2%;
+}
 .mainContent{
     padding: 20px;
     width: 64%;
