@@ -4,13 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/images/ödevboxicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/genel-css/header.css">
-    <link rel="stylesheet" href="/genel-css/footer.css">
+    <link rel="stylesheet" href="../genel-css/header.css">
+    <link rel="stylesheet" href="../genel-css/footer.css">
     <link rel="stylesheet" href="profil.css">
     
     <title>Profilin</title>
 </head>
 <body>
+  <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "learnify";
+
+    $conn = mysqli_connect($servername,$username,$password,$database);
+
+    if(!$conn){
+        die("Bağlantı Hatası: " . mysqli_connect_error());
+    }
+
+    $sql = "select k.*,od.odAdi from kullanicilar k join ogrenimdurumu od on od.odID = k.ogrenimSeviyesi where kullaniciID = 1";
+    $sonuc = mysqli_query($conn,$sql);
+    if ($satir = mysqli_fetch_assoc($sonuc)) {
+      $kullaniciAdi = $satir["kullaniciAdi"];
+      $kullaniciTakmaAdi = $satir["kullaniciTakmaAdi"];
+      $kullaniciSoyadi = $satir["kullaniciSoyadi"];
+      $kayitTarihi = $satir["kayitTarihi"];
+      $cevapSayisi = $satir["cevapSayisi"];
+      $soruSayisi = $satir["soruSayisi"];
+      $ogrenimSeviyesi = $satir["odAdi"];
+      $profilFoto = $satir["profilFoto"];
+      $kullaniciPuani = $satir["kullaniciPuani"];
+    }
+  ?>
     <header>
         <div class="left-side">
           <a href="../MainPage/indeks.html">
@@ -32,7 +58,7 @@
             <i class="fa-regular fa-bell"></i>
           </span>
           <span class="icons">
-            <i class="fa-regular fa-user" onclick="location.href = '/Profil/profil.html'"></i>
+            <i class="fa-regular fa-user" onclick="location.href = '../Profil/profil.html'"></i>
           </span>
         </div>
       </header>
@@ -40,27 +66,27 @@
     <div class="container">
         <div class="leftSide">
             <div class="userInfoMain">
-                <img class="userImg"src="/images/IMG-20241215-WA0006.jpg" alt="">  
+                <img class="userImg"src="../profile-images/<?php echo $profilFoto ?>" alt="">  
                 <div class="userNames">
-                  <h1 class="nickname">Emruu</h1>
-                  <h3 class="username">Emircan Cengiz</h3>
+                  <h1 class="nickname"><?php echo $kullaniciTakmaAdi; ?></h1>
+                  <h3 class="username"><?php echo $kullaniciAdi . " " . $kullaniciSoyadi; ?></h3>
                 </div>
                 
             </div>
             <div class="userDegree" style="display:inline-block;"><p>Amatör</p></div>
             <div class="puanify">
-              <img src="/images/puanify.png" alt="">
-              <p>75 puanify</p>
+              <img src="../images/puanify.png" alt="">
+              <p><?php echo $kullaniciPuani?> puanify</p>
               <i class="fa-solid fa-circle-question"></i>
             </div>
             <div class="stats">
               <div class="cevaplarStat">
                 <p>Cevaplar</p>
-                <h2>0</h2>
+                <h2><?php echo $cevapSayisi; ?></h2>
               </div>
               <div class="sorularStat">
                 <p>Sorular</p>
-                <h2>0</h2>
+                <h2><?php echo $soruSayisi; ?></h2>
               </div>
               <div class="tesekkurStat">
                 <p>Teşekkürler</p>
@@ -70,14 +96,14 @@
             <div class="userAbout">
               <h2>Hakkında</h2>
               <div class="school">
-                <i class="fa-solid fa-building-columns"></i> <h5>Eğitim Durumun: </h5> <p>Üniversite</p>
+                <i class="fa-solid fa-building-columns"></i> <h5>Eğitim Durumun: </h5> <p><?php echo $ogrenimSeviyesi; ?></p>
               </div>
               <div class="loginDate">
-                <i class="fa-solid fa-calendar-days"></i> <h5>Katılma Tarihin: </h5> <p>21.12.2024</p>
+                <i class="fa-solid fa-calendar-days"></i> <h5>Katılma Tarihin: </h5> <p><?php echo $kayitTarihi; ?></p>
               </div>
             </div>
             <div class="setProfile">
-              <button onclick="window.location.href = '/set-profile/set-profile.html'"><i class="fa-solid fa-pen"></i> Profilini Düzenle</button>
+              <button onclick="window.location.href = '../set-profile/set-profile.html'"><i class="fa-solid fa-pen"></i> Profilini Düzenle</button>
             </div>
         </div>
         <div class="rightSide">
@@ -98,7 +124,7 @@
 
     <footer class="footer">
         <div class="footerLearnify">
-            <a href="giris-ekrani.html"><img src="/images/ödevboxicon.png" alt="icon"></a>
+            <a href="giris-ekrani.html"><img src="../images/ödevboxicon.png" alt="icon"></a>
             <h3>Learnify</h3>
         </div>
         <div class="aLinks">
