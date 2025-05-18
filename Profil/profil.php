@@ -103,7 +103,7 @@
               </div>
             </div>
             <div class="setProfile">
-              <button onclick="window.location.href = '../set-profile/set-profile.html'"><i class="fa-solid fa-pen"></i> Profilini Düzenle</button>
+              <button onclick="window.location.href = '../set-profile/set-profile.php'"><i class="fa-solid fa-pen"></i> Profilini Düzenle</button>
             </div>
         </div>
         <div class="rightSide">

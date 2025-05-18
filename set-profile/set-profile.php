@@ -4,15 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/images/ödevboxicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/ödevboxicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../genel-css/header.css">
     <link rel="stylesheet" href="../genel-css/footer.css">
-    <link rel="stylesheet" href="set-profile.css">
+    <link rel="stylesheet" href="../set-profile/set-profile.css">
     <title>Learnify</title>
 </head>
 
 <body>
-    <?php include("../genel-php/profil-bilgileri.php"); ?>
+    <?php 
+        include("../genel-php/profil-bilgileri.php"); 
+        include("../genel-php/db-connection.php");
+    ?>
     <header>
         <div class="left-side">
             <a href="../MainPage/indeks.html">
@@ -44,7 +47,7 @@
                     <div class="setGenderDiv">
                         <h3>Cinsiyet: </h3>
                         <select class="setGenderSelect" name="gender">
-                            <option value="0">Belirtmek istemiyorum.</option>
+                            <option value="NULL">Belirtmek istemiyorum.</option>
                             <option value="Erkek">Erkek</option>
                             <option value="Kız">Kız</option>
                         </select>
@@ -62,19 +65,19 @@
                         <h3>Ad: </h3>
                         <h3 style="text-align: center;"><?php echo $kullaniciAdi; ?></h3>
                         <i class="fa-regular fa-pen-to-square" style="font-size: 1.2rem;"></i>
-                        <input type="text" placeholder="<?php echo $kullaniciAdi; ?>" name="name">
+                        <input type="text" placeholder="<?php echo $kullaniciAdi; ?>" name="name" autocomplete = "none">
                     </div>
                     <div class="setName" id="setSurnameDiv">
                         <h3>Soyad: </h3>
                         <h3 style="text-align: center;"><?php echo $kullaniciSoyadi; ?></h3>
                         <i class="fa-regular fa-pen-to-square" style="font-size: 1.2rem;"></i>
-                        <input type="text" placeholder="<?php echo $kullaniciSoyadi; ?>" name="surname">
+                        <input type="text" placeholder="<?php echo $kullaniciSoyadi; ?>" name="surname" autocomplete = "none">
                     </div>
                     <div class="setUsername" id="setUsernameDiv">
                         <h3>Takma Ad: </h3>
                         <h3 style="text-align: center;"><?php echo $kullaniciTakmaAdi; ?></h3>
                         <i class="fa-regular fa-pen-to-square" style="font-size: 1.2rem;"></i>
-                        <input type="text" placeholder="<?php echo $kullaniciTakmaAdi; ?>" name="userName">
+                        <input type="text" placeholder="<?php echo $kullaniciTakmaAdi; ?>" name="userName" autocomplete = "none">
                     </div>
                 </div>
             </div>
@@ -83,15 +86,17 @@
                 <div class="setPasswordContent content">
                     <div>
                         <h3>Güncel Şifre: </h3>
-                        <input type="text">
+                        <input type="text" name="oldPsw" id="oldPsw" autocomplete = "none">
                     </div>
                     <div>
                         <h3>Yeni Şifre: </h3>
-                        <input type="text" name="password">
+                        <input type="text" name="password" id="password" autocomplete = "none">
+                        <i class="fa-solid fa-xmark"></i>
                     </div>
                     <div>
                         <h3>Yeni Şifre Tekrar:</h3>
-                        <input type="text">
+                        <input type="text" name="agPsw" id="agPsw" autocomplete = "none">
+                        <i class="fa-solid fa-xmark"></i>
                     </div>
                 </div>
             </div>
@@ -100,7 +105,7 @@
                 <div class="setEmailContent content">
                     <div>
                         <h3>Güncel Şifre: </h3>
-                        <input type="text">
+                        <input type="text" autocomplete = "none">
                     </div>
                     <div>
                         <h3>Yeni E-mail: </h3>
@@ -126,7 +131,7 @@
 
     <footer class="footer">
         <div class="footerLearnify">
-            <a href="giris-ekrani.html"><img src="/images/ödevboxicon.png" alt="icon"></a>
+            <a href="giris-ekrani.html"><img src="../images/ödevboxicon.png" alt="icon"></a>
             <h3>Learnify</h3>
         </div>
         <div class="aLinks">
