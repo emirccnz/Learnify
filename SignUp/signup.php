@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["SignUp-button"])) {
 
     $calistirekle = mysqli_query($conn, $ekle);
 
-    if ($calistirekle) {
+    if (true) {
         
         $_SESSION['user_id'] = mysqli_insert_id($conn);
         $_SESSION['username'] = $kullaniciadi;
@@ -29,13 +29,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["SignUp-button"])) {
         $_SESSION['email'] = $email;
         $_SESSION['logged_in'] = true;
        
-        echo "<script>
-                alert('Kayıt Başarılı!');
-                window.location.href = '../MainPage/index.php';
-              </script>";
-        exit(); 
+       echo "<script> alert('Kayıt Başarılı!'); window.location.href = '../MainPage/index.php';</script>";
+
     } else {
-        $error_message = "Kayıt oluşturulurken bir hata oluştu: " . mysqli_error($conn);
+        echo "<script>
+        alert('Kayıt Oluşturulamadı!');
+        window.location.href = 'SignUp.html';
+       </script>";
     }
 
     mysqli_close($conn);

@@ -1,14 +1,12 @@
 <?php
+    include("../genel-php/session-query.php");
     include("../genel-php/db-connection.php");
     include("../genel-php/profil-bilgileri.php");
-    include("../genel-php/session-query.php");
     if($_SERVER["REQUEST_METHOD"] == "POST"){
-
+        
         $soruText = isset($_POST['soruText']) ? $_POST['soruText'] : null;
         $dersSelect = isset($_POST['dersSelect']) ? $_POST['dersSelect'] : null;
         $puanSelect = isset($_POST['puanSelect']) ? $_POST['puanSelect'] : null;
-
-        $userID = 1;
 
         $sql = "INSERT INTO sorular (kullaniciID, soruAciklamasi, fotograf, soruPuani, dersID) VALUES (?, ?, ?, ?, ?)";
 
@@ -53,11 +51,12 @@
                          error_log("Error uploading file: " . $_FILES['foto']['error']);
                     }
                 }
+                echo "<script>alert('$userID')</script>";
                 $puanSql = "update kullanicilar set kullaniciPuani = kullaniciPuani - $puanSelect where kullaniciID = $userID";
                 mysqli_query($conn,$puanSql);
                 $sorularSql = "update kullanicilar set soruSayisi = soruSayisi+1 where kullaniciID = $userID";
                 mysqli_query($conn,$sorularSql);
-                echo "<script>alert('Soru başarıyla kaydedildi.'); window.location.href = '../MainPage/indeks.html'</script>";
+                echo "<script>alert('Soru başarıyla kaydedildi.'); window.location.href = '../MainPage/index.php'</script>";
 
             } else {
                 error_log("Error executing insert statement: " . mysqli_stmt_error($stmt));

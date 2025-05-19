@@ -3,7 +3,7 @@
 require 'db.php';
 include '../genel-php/session-query.php';
 
-$userID = intval($_SESSION['kullaniciID']);
+$userID = $_SESSION['user_id'];
 $userQ = mysqli_prepare($conn, "SELECT kullaniciTakmaAdi, profilFoto FROM kullanicilar WHERE kullaniciID = ?");
 mysqli_stmt_bind_param($userQ, "i", $userID);
 mysqli_stmt_execute($userQ);
@@ -65,9 +65,9 @@ $profilFoto = !empty($user['profilFoto']) ? '../profile-images/' . $user['profil
       </div>
 
       <span class="user-profile">
-        <a href="../set-profile/set-profile.php">
+        <a href="../Profil/profil.php">
           <img class="userProfile"
-          src="<?php echo $profilFoto; ?>"
+          src="../profile-images/<?php echo $profilFoto; ?>"
           alt="Profil"
           
         />
