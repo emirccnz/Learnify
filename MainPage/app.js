@@ -23,7 +23,7 @@ function bindAnswerButtons() {
       const card = e.target.closest('.quest');
       if (!card) return;
       localStorage.setItem('selectedQuest', card.outerHTML);
-      window.location.href = '/cevapla/cevapla.html';
+      window.location.href = '../cevapla/cevapla.php';
     });
   });
 }
@@ -48,7 +48,7 @@ async function loadQuestions({
   container.innerHTML = '';
 
   qs.forEach((q) => {
-    console.log(q);
+   
 
     const card = document.createElement('div');
     card.className = 'quest';
@@ -74,9 +74,8 @@ async function loadQuestions({
       </div>
 
       <div class="answer">
-        <i class="fa-solid fa-medal"></i>
         <span class="points">+${q.soruPuani} pn</span>
-        <button class="answerBtn">CEVAPLA</button>
+        <button class="answerBtn">Cevapla</button>
       </div>
     `;
 

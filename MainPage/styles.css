@@ -330,6 +330,8 @@ html {
   justify-content: flex-end;
 }
 
+
+
 .answer button {
   padding: 8px 16px;
   background-color: #2b4360;
@@ -341,9 +343,9 @@ html {
   transition: all 0.3s;
 }
 
-.answer button:hover {
+.answerBtn:hover {
   background-color: #fff;
-  color: #2b4360;
+  color:  #2b4360;
   border-color: #2b4360;
 }
 

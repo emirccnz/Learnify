@@ -1,7 +1,6 @@
 <?php
 
-session_start();
-
+include '../genel-php/session-query.php';
 require 'db.php';
 include '../genel-php/profil-bilgileri.php';
 
@@ -46,61 +45,37 @@ $cevaplar = mysqli_fetch_all($cevapSonuc, MYSQLI_ASSOC);
   <link rel="stylesheet" href="../genel-css/header.css" />
   <link rel="stylesheet" href="../genel-css/footer.css" />
   <link rel="stylesheet" href="soru.css" />
-  <link rel="stylesheet" href="../genel-css/header.css" />
-  <link rel="stylesheet" href="../genel-css/footer.css" />
+  
   <title>Soru Detayı</title>
 </head>
 <body>
 
- <header>
-    <div class="left-side">
-      <a href="index.php">
-        <img src="../images/ödevboxicon.png" alt="Learnify" />
-      </a>
-      <h3>learnify</h3>
-    </div>
-
-    <div class="input-container">
-      <i class="fa-solid fa-magnifying-glass icon"></i>
-      <input
-        id="searchInput"
-        class="search-input"
-        type="search"
-        placeholder="Herhangi bir soru arayabilirsin..."
-      />
-    </div>
-
-    <div class="right-side">
-      <a href="../Soru/soru.php"><span class="button-text">soru sor</span></a>
-      <div class="notificationWrapper">
-        <span class="icons notification-icon">
-          <i class="fa-regular fa-bell"></i>
-        </span>
-        <div class="notificationPopup" style="display:none;">
-          <div class="popupArrow"></div>
-          <h2>Bildirimler</h2>
-          <p>Learnify' a Hoşgeldiniz.</p>
-          <p>Kayıt başarılı</p>
-          <div class="notificationItem">
-            <img style="height: 15%; width: 15%;" src="/images/puanify.png" alt="" />
-            <span>+5 puan hesabına eklendi.</span>
-          </div>
+ 
+<header>
+        <div class="left-side">
+          <a href="../MainPage/indeks.html">
+            <img src="../images/ödevboxicon.png" alt="Learnify" />
+          </a>
+          <h3>learnify</h3>
         </div>
-      </div>
-
-      <span class="user-profile">
-        <a href="../set-profile/set-profile.php">
-          <img class="userProfile" style="width: 4rem;height: 4rem;" 
-          src="../profile-images/<?php echo $profilFoto; ?>"
-          alt="Profil"
-          
-          
-        />
-        </a>
-        
-    </div>
-  </header>
-
+        <div class="input-container">
+          <i class="fa-solid fa-magnifying-glass icon"></i>
+          <input
+            class="search-input"
+            type="search"
+            placeholder="Herhangi bir soru arayabilirsin..."
+          />
+        </div>
+        <div class="right-side">
+          <a href="../Soru/soru.html"> <span class="button-text">soru sor</span></a>
+          <span class="icons">
+            <i class="fa-regular fa-bell"></i>
+          </span>
+          <span class="icons">
+            <i class="fa-regular fa-user" onclick="location.href = '../Profil/profil.html'"></i>
+          </span>
+        </div>
+      </header>
 
   <main class="soru-container">
 
