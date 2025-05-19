@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/images/ödevboxicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/ödevboxicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../genel-css/header.css">
     <link rel="stylesheet" href="../genel-css/footer.css">
     <link rel="stylesheet" href="profil.css">
@@ -38,7 +38,7 @@
             <i class="fa-regular fa-bell"></i>
           </span>
           <span class="icons">
-            <i class="fa-regular fa-user" onclick="location.href = '../Profil/profil.html'"></i>
+            <i class="fa-regular fa-user" onclick="location.href = '../Profil/profil.php'"></i>
           </span>
         </div>
       </header>
