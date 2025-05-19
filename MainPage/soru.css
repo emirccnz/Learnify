@@ -1,0 +1,75 @@
+
+.soru-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+.soru-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.profil-kutu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.profil-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2b4360;
+}
+.kullanici-adi {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+}
+.ders-etiket {
+  background: #f0f0f0;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  color: #555;
+}
+.soru-icerik p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.soru-puan {
+  color: #c98600;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.cevaplar-bolumu h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+.cevap-kutu {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #fff;
+}
+.cevap-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.cevap-icerik p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+

@@ -84,6 +84,21 @@ html {
   border-bottom: 10px solid white;
 }
 
+.userProfile{
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.user-profile:hover img {
+ 
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+
+    }
+
+
 .side-bar {
   background-color: #fff;
 }
@@ -262,11 +277,9 @@ html {
   width: 60rem;
   box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
   border-radius: 8px;
-  overflow: hidden;
   border: 2px solid #e0e0e0;
-  height: 30rem;
   margin-bottom: 2rem;
-  background-color: #fff;
+  background: white;
 }
 
 .content-header {
@@ -282,10 +295,10 @@ html {
 }
 
 .content-header .profile img {
-  border-radius: 50%;
-  object-fit: cover;
   width: 4rem;
   height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .content-header .profile span {
@@ -303,51 +316,44 @@ html {
 .questions {
   padding: 15px;
   border-top: 1px solid #e0e0e0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .questions p {
   font-size: 1.4rem;
+  margin: 1rem 0;
 }
 
 .answer {
   padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: relative;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .answer button {
   padding: 8px 16px;
   background-color: #2b4360;
   color: #fff;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 7px;
   cursor: pointer;
   font-size: 1.4rem;
-  border: 2px solid #fff;
+  transition: all 0.3s;
 }
 
 .answer button:hover {
   background-color: #fff;
   color: #2b4360;
-  transition: 0.5s;
-  border: 2px solid #2b4360;
-}
-
-.answer i {
-  color: #c98600;
-  font-size: 1.4rem;
+  border-color: #2b4360;
 }
 
 .points {
-  color: #555;
   font-size: 1.4rem;
   position: absolute;
   left: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #c98600;
 }
 
 .scroll-top {
@@ -399,6 +405,7 @@ html {
   }
 
   .container {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -482,4 +489,9 @@ html {
   font-size: 7px;
 
 }
+}
+
+.soruLink a{
+  color: black !important;
+
 }
