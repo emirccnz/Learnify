@@ -16,7 +16,7 @@
   <body id="body">
     <header>
       <div class="left-side">
-        <a href="/MainPage/indeks.html">
+        <a href="../MainPage/indeks.php">
           <img src="../images/ödevboxicon.png" alt="Learnify" />
         </a>
         <h3>learnify</h3>
