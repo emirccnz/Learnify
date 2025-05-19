@@ -14,28 +14,38 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["SignUp-button"])) {
     $dogumtarihi = $_POST["dogumTarihi"];
     $egitimduzeyi = $_POST["educationselect"];
     $cinsiyet = $_POST["genderselect"];
+    $emailKontrol = "SELECT * FROM kullanicilar WHERE email = '$email'";
+    $calistirKontrol = mysqli_query($conn, $emailKontrol);
 
-  
+    if (mysqli_num_rows($calistirKontrol) > 0) {
+        echo "<script>
+        alert('Girilen E-mail zaten kayıtlı!');
+        window.location.href = 'SignUp.html';
+        </script>";
+        exit(); 
+    }
+
     $ekle = "INSERT INTO kullanicilar (kullaniciAdi, kullaniciTakmaAdi, kullaniciSoyadi, email, sifre, dogumGunu, ogrenimSeviyesi, cinsiyet)
              VALUES ('$name', '$kullaniciadi', '$soyad', '$email', '$sifre', '$dogumtarihi', '$egitimduzeyi', '$cinsiyet')";
 
     $calistirekle = mysqli_query($conn, $ekle);
 
-    if (true) {
-        
+    if ($calistirekle) {
         $_SESSION['user_id'] = mysqli_insert_id($conn);
         $_SESSION['username'] = $kullaniciadi;
         $_SESSION['name'] = $name;
         $_SESSION['email'] = $email;
         $_SESSION['logged_in'] = true;
-       
-       echo "<script> alert('Kayıt Başarılı!'); window.location.href = '../MainPage/index.php';</script>";
 
+        echo "<script> 
+        alert('Kayıt Başarılı!'); 
+        window.location.href = '../MainPage/index.php';
+        </script>";
     } else {
         echo "<script>
         alert('Kayıt Oluşturulamadı!');
         window.location.href = 'SignUp.html';
-       </script>";
+        </script>";
     }
 
     mysqli_close($conn);
