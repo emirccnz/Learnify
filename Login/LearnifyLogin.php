@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($hashedPassword === $user['sifre']) {
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['nickname'] = $user['kullaniciTakmaAdi'];
-               header("Location: http://localhost/learnify/Learnify/MainPage/indeks.php");
+               header("Location: http://localhost/learnify/Learnify/MainPage/index.php");
                 exit;
  
             } else {

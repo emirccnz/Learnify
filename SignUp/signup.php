@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["SignUp-button"])) {
        
         echo "<script>
                 alert('Kayıt Başarılı!');
-                window.location.href = '../MainPage/indeks.php';
+                window.location.href = '../MainPage/index.php';
               </script>";
         exit(); 
     } else {
