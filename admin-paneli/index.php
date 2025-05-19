@@ -11,7 +11,6 @@
     <div class="admin-container">
         <h1>Learnify Admin Panel</h1>
         
-        <!-- Users Section -->
         <section class="admin-section">
             <h2><i class="fas fa-users"></i> Kullanıcı Yönetimi</h2>
             <div class="search-box">
@@ -51,7 +50,6 @@
             </div>
         </section>
 
-        <!-- Questions Section -->
         <section class="admin-section">
             <h2><i class="fas fa-question-circle"></i> Soru Yönetimi</h2>
             <div class="search-box">
@@ -65,23 +63,24 @@
                             <th>ID</th>
                             <th>Kullanıcı</th>
                             <th>Soru</th>
-                            <th>Tarih</th>
+                            <th>Ders</th>
                             <th>İşlemler</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        $sql = "SELECT s.*, k.kullaniciAdi FROM sorular s 
+                        $sql = "SELECT s.*, k.kullaniciTakmaAdi,d.dersAdi FROM sorular s 
                                 JOIN kullanicilar k ON s.kullaniciID = k.kullaniciID 
+                                JOIN dersler d ON d.dersID = s.DersID
                                 ORDER BY s.soruID DESC";
                         $result = mysqli_query($conn, $sql);
                         
                         while($row = mysqli_fetch_assoc($result)) {
                             echo "<tr>";
                             echo "<td>" . $row['soruID'] . "</td>";
-                            echo "<td>" . $row['kullaniciAdi'] . "</td>";
-                            echo "<td>" . substr($row['soruMetni'], 0, 100) . "...</td>";
-                            echo "<td>" . $row['soruTarihi'] . "</td>";
+                            echo "<td>" . $row['kullaniciTakmaAdi'] . "</td>";
+                            echo "<td>" . substr($row['soruAciklamasi'], 0, 200) . "...</td>";
+                            echo "<td>" . $row['dersAdi'] . "</td>";
                             echo "<td><button onclick='deleteQuestion(" . $row['soruID'] . ")' class='delete-btn'><i class='fas fa-trash'></i></button></td>";
                             echo "</tr>";
                         }
@@ -91,7 +90,6 @@
             </div>
         </section>
 
-        <!-- Answers Section -->
         <section class="admin-section">
             <h2><i class="fas fa-comments"></i> Cevap Yönetimi</h2>
             <div class="search-box">

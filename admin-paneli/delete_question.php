@@ -6,13 +6,11 @@ header('Content-Type: application/json');
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['questionId'])) {
     $questionId = intval($_POST['questionId']);
     
-    // First delete all answers for this question
     $sql = "DELETE FROM cevaplar WHERE soruID = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "i", $questionId);
     mysqli_stmt_execute($stmt);
     
-    // Then delete the question
     $sql = "DELETE FROM sorular WHERE soruID = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "i", $questionId);

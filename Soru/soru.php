@@ -37,7 +37,7 @@
           <i class="fa-regular fa-bell"></i>
         </span>
         <span class="icons">
-          <i class="fa-regular fa-user" onclick="location.href = '../Profil/profil.html'"></i>
+          <i class="fa-regular fa-user" onclick="location.href = '../Profil/profil.php'"></i>
         </span>
       </div>
     </header>
