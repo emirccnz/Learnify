@@ -12,30 +12,8 @@
 </head>
 <body>
   <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "learnify";
-
-    $conn = mysqli_connect($servername,$username,$password,$database);
-
-    if(!$conn){
-        die("Bağlantı Hatası: " . mysqli_connect_error());
-    }
-
-    $sql = "select k.*,od.odAdi from kullanicilar k join ogrenimdurumu od on od.odID = k.ogrenimSeviyesi where kullaniciID = 1";
-    $sonuc = mysqli_query($conn,$sql);
-    if ($satir = mysqli_fetch_assoc($sonuc)) {
-      $kullaniciAdi = $satir["kullaniciAdi"];
-      $kullaniciTakmaAdi = $satir["kullaniciTakmaAdi"];
-      $kullaniciSoyadi = $satir["kullaniciSoyadi"];
-      $kayitTarihi = $satir["kayitTarihi"];
-      $cevapSayisi = $satir["cevapSayisi"];
-      $soruSayisi = $satir["soruSayisi"];
-      $ogrenimSeviyesi = $satir["odAdi"];
-      $profilFoto = $satir["profilFoto"];
-      $kullaniciPuani = $satir["kullaniciPuani"];
-    }
+    include("../genel-php/db-connection.php");
+    include("../genel-php/profil-bilgileri.php");
   ?>
     <header>
         <div class="left-side">
@@ -73,7 +51,7 @@
                 </div>
                 
             </div>
-            <div class="userDegree" style="display:inline-block;"><p>Amatör</p></div>
+            <div class="userDegree" style="display:inline-block;"><p><?php echo $seviye;?></p></div>
             <div class="puanify">
               <img src="../images/puanify.png" alt="">
               <p><?php echo $kullaniciPuani?> puanify</p>
@@ -116,7 +94,22 @@
                 <p>Henüz soru cevaplamadın.</p>
               </div>
               <div class="questions">
-                <p>Henüz soru sormadın.</p>
+                    <?php 
+                    $sql = "select s.*,d.dersAdi from sorular s join dersler d on d.dersID = s.dersID where s.kullaniciID = 1 order by s.soruID desc";
+                    $result = mysqli_query($conn,$sql);
+                    if(mysqli_num_rows($result) > 0){
+                      while($row = mysqli_fetch_assoc($result)){
+                        echo "<div class='soruDiv'>";
+                        echo "<img src='../profile-images/$profilFoto' alt=''>";
+                        echo "<p class='soruAciklamasi'>" . substr($row["soruAciklamasi"],0,40) . "...</p>";
+                        echo "<p class='soruDers'>{$row['dersAdi']}</p>";
+                        echo "</div>";
+                      }
+                    }
+                    else{
+                      echo "<p>Henüz soru sormadın.</p>";
+                    }
+                    ?>
               </div>
           </div>
         </div>
