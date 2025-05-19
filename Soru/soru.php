@@ -4,14 +4,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/images/ödevboxicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/ödevboxicon.png" type="image/x-icon">
     <title>Soru Sor</title>
-    <link rel="stylesheet" href="/genel-css/header.css" />
-    <link rel="stylesheet" href="/genel-css/footer.css" />
+    <link rel="stylesheet" href="../genel-css/header.css" />
+    <link rel="stylesheet" href="../genel-css/footer.css" />
     <link rel="stylesheet" href="soru.css" />
   </head>
 
   <body>
+    <?php
+      include("../genel-php/db-connection.php"); 
+      include("../genel-php/profil-bilgileri.php")
+    ?>
     <header>
       <div class="left-side">
         <a href="../MainPage/indeks.html">
@@ -33,12 +37,13 @@
           <i class="fa-regular fa-bell"></i>
         </span>
         <span class="icons">
-          <i class="fa-regular fa-user" onclick="location.href = '/Profil/profil.html'"></i>
+          <i class="fa-regular fa-user" onclick="location.href = '../Profil/profil.html'"></i>
         </span>
       </div>
     </header>
 
-    <div class="container">
+    <form action="soru-sor.php" method="post" enctype="multipart/form-data">
+      <div class="container">
       <div class="box">
         <h2
           style="
@@ -53,57 +58,48 @@
         <textarea
           id="questionInput"
           placeholder="Sorunuzu buraya yazın..."
+          name = "soruText"
         ></textarea>
         <div class="links">
           <div class="symbol">
-            <input type="file" id="fileInput" style="display: none;" accept="image/*">
+            <input type="file" id="fileInput" style="display: none;" accept="image/*" name="foto">
             <a href="#"><i class="fa-solid fa-paperclip" id="paperclipIcon"></i></a>
           </div>
           <button id="fileButton" style="display: none; justify-content: space-between; align-items: center; background-color: white; color: #38587e;"> <img src="" alt="" style="width: 2rem; height: 2rem; object-fit: cover;"> <p style="margin-right: 10px;"></p> <i class="fa-solid fa-x" style="font-size: 1.2rem; color: #38587e;"></i></button>
-          <button>Soruyu Gönder</button>
-          <div class="dropdown dd1">
-            <button class="dropdown-btn">
-              <p style="display: inline" id="lessonP">İngilizce</p>
-              <i class="fa-solid fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content ddc1">
-              <a href="" class="clickableContent">İngilizce</a>
-              <a href="" class="clickableContent">Matematik</a>
-              <a href="" class="clickableContent">Türkçe</a>
-              <a href="" class="clickableContent">Tarih</a>
-            </div>
-          </div>
-          <div class="dropdown dd2">
-            <button class="dropdown-btn" style="margin-left: 6px">
-              <p style="display: inline" id="pointP">10</p>
-              <i class="fa-solid fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content ddc2">
-              <a href="" class="clickableContent">10</a>
-              <a href="" class="clickableContent">15</a>
-              <a href="" class="clickableContent">20</a>
-              <a href="" class="clickableContent">25</a>
-              <a href="" class="clickableContent">30</a>
-              <a href="" class="clickableContent">35</a>
-              <a href="" class="clickableContent">40</a>
-              <a href="" class="clickableContent">45</a>
-              <a href="" class="clickableContent">50</a>
-            </div>
-          </div>
+          <button type="submit">Soruyu Gönder</button>
+          <select id="lessonSelect" name="dersSelect" class="custom-select">
+            <option value="0">Matematik</option>
+            <option value="1">Türkçe</option>
+            <option value="2">Yazılım</option>
+            <option value="3">Fizik</option>
+            <option value="4">Tarih</option>
+            <option value="5">İngilizce</option>
+          </select>
+          <select id="pointSelect" name="puanSelect" class="custom-select">
+            <option value="10" selected>10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+            <option value="45">45</option>
+            <option value="50">50</option>
+          </select>
           <div class="question">
             <a href="#"
               ><i
                 class="fa-solid fa-circle-question"
                 style="font-size: 2rem"
               ></i
-              >75 puanın var</a
+              ><?php echo $kullaniciPuani; ?> puanın var</a
             >
           </div>
         </div>
       </div>
       <div class="DersLogosu">
         <img
-          src="/images/education-graduation-academic-logo-academy-school-1625160-pxhere.com.jpg"
+          src="../images/education-graduation-academic-logo-academy-school-1625160-pxhere.com.jpg"
           alt="Ders Logosu"
         />
         <h1 style="margin-top: -4rem; font-size: 3rem; text-align: center">
@@ -111,10 +107,11 @@
         </h1>
       </div>
     </div>
+    </form>
     <footer class="footer">
       <div class="footerLearnify">
         <a href="giris-ekrani.html"
-          ><img src="/images/ödevboxicon.png" alt="icon"
+          ><img src="../images/ödevboxicon.png" alt="icon"
         /></a>
         <h3>Learnify</h3>
       </div>

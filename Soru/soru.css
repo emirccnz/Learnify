@@ -65,7 +65,6 @@ button:hover {
     background-color: white;
     transition: 0.4s;
     color: #38587e;
-    
     cursor: pointer;
 }
 
@@ -75,59 +74,49 @@ button:hover {
     border-radius: 8px;
 }
 
-
-.dropdown {
-   position: relative;
+.custom-select {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin-left: 6px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.5rem;
+    padding-right: 3rem;
+    min-width: 120px;
+    text-align: left;
+    position: relative;
     display: inline-block;
 }
 
-.dropdown-btn {
-    background-color: #38587e;
-    color: white;
-    padding: 1rem;
-    border: none;
-    border-radius: 8px;
-    display: inline;
-    border: 0.1rem solid white;
-    margin-left: 6px;
+.custom-select:hover {
+    border-color: #38587e;
 }
 
-.dropdown-btn:hover {
+.custom-select:focus {
+    outline: none;
+    border-color: #38587e;
+    box-shadow: 0 0 0 2px rgba(56, 88, 126, 0.2);
+}
+
+.custom-select option {
     background-color: white;
-    color: #2b4360;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    border: 1px solid black;
-    border-radius: 8px;
-    margin-left: 6px;
-    width: inherit;
-    max-height: 15rem;
-    overflow: auto;
-}
-
-.dropdown-content a {
     color: black;
-    padding: 1rem 1.6rem;
-    text-decoration: none;
-    border: 1px solid black;
-    display: block;
+    padding: 1rem;
+    font-size: 1.5rem;
 }
 
-.dropdown-content a:hover {
+.custom-select option:checked {
     background-color: #38587e;
     color: white;
-    cursor: pointer;
-}
-
-.dd1:hover .ddc1 {
-    display: block;
-}
-.dd2:hover .ddc2{
-    display: block;
 }
 
 .symbol{
