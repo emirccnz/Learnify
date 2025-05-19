@@ -1,41 +1,28 @@
 <?php
-$password = $_POST['password'] ?? '';
-session_start();
-include("../genel-php/db-connection.php"); 
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    include("../genel-php/db-connection.php");
 
-$alertMessage = ''; 
+    $pswrd = isset($_POST['password']) ? htmlspecialchars($_POST['password']) : null;
+    $email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : null;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    
-    $email = mysqli_real_escape_string($conn, $_POST['email'] ?? '');
-    
-    if ($email && $password) {
-        
-        $query = "SELECT * FROM kullanicilar WHERE email = '$email' LIMIT 1";
-        $result = mysqli_query($conn, $query);
-
-        if ($result && mysqli_num_rows($result) == 1) {
-            $user = mysqli_fetch_assoc($result);
-
-            
-            if ($password === $user['password']) {  
-                
-                $_SESSION['user_id'] = $user['id'];
-                $_SESSION['nickname'] = $user['nickname'];
-
-                header("Location: dashboard.php");
-                exit;
-            } else {
-                
-                $alertMessage = '<div class="alert alert-danger" role="alert">Şifre yanlış!</div>';
-            }
-        } else {
-            
-            $alertMessage = '<div class="alert alert-warning" role="alert">Kullanıcı sistemde kayıtlı değil!</div>';
+    if($pswrd && $email){
+        $sql = "select * from kullanicilar where email = '$email'";
+        $result = mysqli_query($conn,$sql);
+        $row = mysqli_fetch_assoc($result);
+        $hashedpswrd = hash('sha512',$pswrd);
+        if($hashedpswrd == $row['sifre']){
+            session_start();
+            $_SESSION['user_id'] = $row['kullaniciID'];
+            header("location: ../MainPage/index.php");
         }
-    } else {
-        
-        $alertMessage = '<div class="alert alert-danger" role="alert">Lütfen email ve şifreyi doldurun.</div>';
+        else{
+            echo "<script>alert('Şifre yanlış!'); window.location.href='LearnifyLogin.html'</script>";
+            exit;
+        }
+    }
+    else{
+        echo "<script>alert('Email veya şifre yanlış!'); location.href= 'LearnifyLogin.html'</script>";
+        exit;
     }
 }
 ?>
