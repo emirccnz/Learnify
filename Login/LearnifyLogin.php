@@ -18,9 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($hashedPassword === $user['sifre']) {
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['nickname'] = $user['kullaniciTakmaAdi'];
-               header("Location: http://localhost/learnify/Learnify/MainPage/index.php");
+               header("Location: http://localhost/learnify/Learnify/MainPage/indeks.php");
                 exit;
-
+ 
             } else {
                 $alertMessage = '<div class="alert alert-danger" role="alert">E-Mail veya şifre hatalı!</div>';
             }

@@ -13,6 +13,12 @@
 
 <body>
     <?php 
+        session_start();
+  if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
+$userID = $_SESSION["user_id"];
         include("../genel-php/profil-bilgileri.php"); 
         include("../genel-php/db-connection.php");
     ?>

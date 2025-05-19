@@ -1,4 +1,5 @@
 <?php
+session_start(); 
 include("db.php");
 
 $success_message = "";
@@ -21,6 +22,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["SignUp-button"])) {
     $calistirekle = mysqli_query($conn, $ekle);
 
     if ($calistirekle) {
+        
+        $_SESSION['user_id'] = mysqli_insert_id($conn);
+        $_SESSION['username'] = $kullaniciadi;
+        $_SESSION['name'] = $name;
+        $_SESSION['email'] = $email;
+        $_SESSION['logged_in'] = true;
        
         echo "<script>
                 alert('Kayıt Başarılı!');

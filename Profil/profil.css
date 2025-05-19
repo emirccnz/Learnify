@@ -160,8 +160,38 @@ html{
   margin: 30px;
   margin-top: 20px;
 }
+.content p{
+  display: inline-block;
+}
 .questions{
+  height: 35rem;
+  overflow-y: auto;
+  width: 100%;
   display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column; 
+}
+
+.soruDiv{
+  height: 15rem;
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  background-color: white;
+  margin-top: 10px;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.soruDiv img{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.soruDiv p{
+  width: 20%;
 }
 @media screen and (max-width: 1000px) {
     html {

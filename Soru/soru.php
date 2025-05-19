@@ -13,6 +13,7 @@
 
   <body>
     <?php
+      include("../genel-php/session-query.php");
       include("../genel-php/db-connection.php"); 
       include("../genel-php/profil-bilgileri.php")
     ?>
@@ -37,7 +38,7 @@
           <i class="fa-regular fa-bell"></i>
         </span>
         <span class="icons">
-          <i class="fa-regular fa-user" onclick="location.href = '../Profil/profil.html'"></i>
+          <i class="fa-regular fa-user" onclick="location.href = '../Profil/profil.php'"></i>
         </span>
       </div>
     </header>

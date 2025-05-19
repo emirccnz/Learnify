@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/images/ödevboxicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/genel-css/header.css">
-    <link rel="stylesheet" href="/genel-css/footer.css">
+    <link rel="stylesheet" href="../genel-css/header.css">
+    <link rel="stylesheet" href="../genel-css/footer.css">
     <link rel="stylesheet" href="cevapla.css">
     <title>Cevapla</title>
 </head>
 <body>
+  <?php
+  include("../genel-php/session-query.php");
+  include("../genel-php/profil-bilgileri.php");
+  ?>
     <header>
         <div class="left-side">
           <a href="../MainPage/indeks.html">
@@ -31,12 +35,12 @@
             <i class="fa-regular fa-bell"></i>
           </span>
           <span class="icons">
-            <i class="fa-regular fa-user" onclick="location.href = '/Profil/profil.html'"></i>
+            <i class="fa-regular fa-user" onclick="location.href = '../Profil/profil.php'"></i>
           </span>
         </div>
       </header>
 
-
+    <form action="cevap-php" method="post" enctype = "multipart/form-data">
     <div class="replyContainer">
         <div class="quest" id="quest">
             
@@ -44,8 +48,8 @@
           <div class="reply">
             <div class="content-header">
                 <div class="profile">
-                    <img src="../images/IMG-20241215-WA0006.jpg" alt="user-profil" />
-                    <span>emruu</span>
+                    <img src="../profile-images/<?php echo $profilFoto;?>" alt="user-profil" />
+                    <span><?php echo $kullaniciTakmaAdi;?></span>
                   </div>
             </div>
             <div class="replies">
@@ -54,12 +58,13 @@
           </div>
     </div>
     <div class="buttonDiv">
-        <button class="send">Cevabını Gönder</button>
+        <button class="send" type="submit">Cevabını Gönder</button>
     </div>
+    </form>
 
       <footer class="footer">
         <div class="footerLearnify">
-            <a href="giris-ekrani.html"><img src="/images/ödevboxicon.png" alt="icon"></a>
+            <a href="giris-ekrani.html"><img src="../images/ödevboxicon.png" alt="icon"></a>
             <h3>Learnify</h3>
         </div>
         <div class="aLinks">
