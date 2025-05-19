@@ -34,7 +34,7 @@ $userID = $_SESSION["user_id"];
             <input class="search-input" type="search" placeholder="Herhangi bir soru arayabilirsin..." />
         </div>
         <div class="right-side">
-            <a href="#"> <span class="button-text">soru sor</span></a>
+            <a href="../soru/soru.php"> <span class="button-text">soru sor</span></a>
             <span class="icons">
                 <i class="fa-regular fa-bell"></i>
             </span>
