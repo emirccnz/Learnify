@@ -2,9 +2,6 @@
 session_start(); 
 include("db.php");
 
-$success_message = "";
-$error_message = "";
-
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["SignUp-button"])) {
     $name = $_POST["Ad"];
     $soyad = $_POST["Soyad"];
@@ -14,16 +11,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["SignUp-button"])) {
     $dogumtarihi = $_POST["dogumTarihi"];
     $egitimduzeyi = $_POST["educationselect"];
     $cinsiyet = $_POST["genderselect"];
-    $emailKontrol = "SELECT * FROM kullanicilar WHERE email = '$email'";
-    $calistirKontrol = mysqli_query($conn, $emailKontrol);
 
-    if (mysqli_num_rows($calistirKontrol) > 0) {
+    $emailKontrol = "SELECT * FROM kullanicilar WHERE email = '$email'";
+    $emailSorgu = mysqli_query($conn, $emailKontrol);
+
+    if (mysqli_num_rows($emailSorgu) > 0) {
         echo "<script>
         alert('Girilen E-mail zaten kayıtlı!');
-        window.location.href = 'SignUp.html';
+        window.location.href = '../Login/LearnifyLogin.html';
         </script>";
-        exit(); 
+        exit();
     }
+
+    
+    $kullaniciAdiKontrol = "SELECT * FROM kullanicilar WHERE kullaniciTakmaAdi = '$kullaniciadi'";
+    $kullaniciAdiSorgu = mysqli_query($conn, $kullaniciAdiKontrol);
+
+    if (mysqli_num_rows($kullaniciAdiSorgu) > 0) {
+        echo "<script>
+        alert('Kullanıcı Adı Daha Önceden Kullanılmış!');
+        window.location.href = '../Login/LearnifyLogin.html';
+        </script>";
+        exit();
+    }
+
 
     $ekle = "INSERT INTO kullanicilar (kullaniciAdi, kullaniciTakmaAdi, kullaniciSoyadi, email, sifre, dogumGunu, ogrenimSeviyesi, cinsiyet)
              VALUES ('$name', '$kullaniciadi', '$soyad', '$email', '$sifre', '$dogumtarihi', '$egitimduzeyi', '$cinsiyet')";
@@ -37,14 +48,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["SignUp-button"])) {
         $_SESSION['email'] = $email;
         $_SESSION['logged_in'] = true;
 
-        echo "<script> 
-        alert('Kayıt Başarılı!'); 
-        window.location.href = '../MainPage/index.php';
+        echo "<script>
+        alert('Kayıt Başarılı!');
+        window.location.href = '../Login/LearnifyLogin.html';
         </script>";
     } else {
         echo "<script>
         alert('Kayıt Oluşturulamadı!');
-        window.location.href = 'SignUp.html';
+        window.location.href = '../Login/LearnifyLogin.html';
         </script>";
     }
 
