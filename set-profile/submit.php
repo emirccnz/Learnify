@@ -1,9 +1,5 @@
 <?php
-// session_start();
-// if (!isset($_SESSION["kullanici_id"])) {
-//     header("Location: login.php");
-//     exit();
-// }
+include("../genel-php/session-query.php");
 include("../genel-php/db-connection.php");
 if($_SERVER["REQUEST_METHOD"]== "POST"){
     
@@ -18,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
     $educationalStatus = isset($_POST['educationalStatus']) ? htmlspecialchars($_POST['educationalStatus']) : null;
 
     // $userID = $_SESSION["kullaniciID"]; 
-    $userID = 1;
+    $userID = $_SESSION["user_id"];
 
     if($educationalStatus){
         $sql = "update kullanicilar set ogrenimSeviyesi = $educationalStatus where  kullaniciID = {$userID}";

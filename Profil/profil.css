@@ -172,11 +172,10 @@ html{
   align-items: center;
   text-align: center;
   flex-direction: column; 
-  padding: 5px;
 }
 
 .soruDiv{
-  height: 8rem;
+  height: 15rem;
   display: flex;
   width: 80%;
   justify-content: space-evenly;

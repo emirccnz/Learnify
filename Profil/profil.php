@@ -12,6 +12,8 @@
 </head>
 <body>
   <?php
+  
+    include("../genel-php/session-query.php");
     include("../genel-php/db-connection.php");
     include("../genel-php/profil-bilgileri.php");
   ?>
@@ -95,7 +97,7 @@
               </div>
               <div class="questions">
                     <?php 
-                    $sql = "select s.*,d.dersAdi from sorular s join dersler d on d.dersID = s.dersID where s.kullaniciID = 1 order by s.soruID desc";
+                    $sql = "select s.*,d.dersAdi from sorular s join dersler d on d.dersID = s.dersID where s.kullaniciID = $userID order by s.soruID desc";
                     $result = mysqli_query($conn,$sql);
                     if(mysqli_num_rows($result) > 0){
                       while($row = mysqli_fetch_assoc($result)){

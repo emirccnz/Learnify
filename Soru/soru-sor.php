@@ -1,6 +1,7 @@
 <?php
     include("../genel-php/db-connection.php");
     include("../genel-php/profil-bilgileri.php");
+    include("../genel-php/session-query.php");
     if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $soruText = isset($_POST['soruText']) ? $_POST['soruText'] : null;

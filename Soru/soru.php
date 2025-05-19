@@ -13,6 +13,7 @@
 
   <body>
     <?php
+      include("../genel-php/session-query.php");
       include("../genel-php/db-connection.php"); 
       include("../genel-php/profil-bilgileri.php")
     ?>
