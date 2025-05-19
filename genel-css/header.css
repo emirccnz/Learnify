@@ -94,7 +94,7 @@ header {
   font-weight: bold;
   border: 1px solid #38587e;
 }
-/* 
+
 .icons {
   font-size: 2rem;
   text-align: center;
@@ -109,20 +109,7 @@ header {
   border: 1px solid #38587e;
   border-radius: 60%;
   padding: 8px;
-} */
-.userProfile{
-  height: 4rem;
-  width: 4rem;
-  border-radius: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease, filter 0.3s ease;
 }
-
-.user-profile:hover img {
- 
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-
-    }
 
 a{
   color: white;
@@ -148,4 +135,3 @@ a{
     font-size: 5px;
   }
 }
-

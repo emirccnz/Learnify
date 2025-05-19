@@ -1,12 +1,7 @@
 <?php
-session_start();
+
 require 'db.php';
-
-
-if (!isset($_SESSION["kullaniciID"])) {
-    header('Location: login.php');
-    exit;
-}
+include '../genel-php/session-query.php';
 
 $userID = intval($_SESSION['kullaniciID']);
 $userQ = mysqli_prepare($conn, "SELECT kullaniciTakmaAdi, profilFoto FROM kullanicilar WHERE kullaniciID = ?");
@@ -91,14 +86,14 @@ $profilFoto = !empty($user['profilFoto']) ? '../profile-images/' . $user['profil
 
           <li>
             <div class="nav-bar-items-icon nav-bar-item">
-              <i class="fa-solid fa-list-ul"></i>
+           
               <a href="#" data-dersid="">Bütün konular</a>
             </div>
           </li>
           <?php foreach ($dersler as $d): ?>
             <li>
               <div class="nav-bar-items-icon nav-bar-item">
-                <i class="fa-solid fa-book-open"></i>
+              
                 <a href="#" data-dersid="<?php echo $d['dersID']; ?>">
                   <?php echo htmlspecialchars($d['dersAdi']); ?>
                 </a>
