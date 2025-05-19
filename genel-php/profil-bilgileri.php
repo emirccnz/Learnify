@@ -1,14 +1,5 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "learnify";
-
-    $conn = mysqli_connect($servername,$username,$password,$database);
-
-    if(!$conn){
-        die("Bağlantı Hatası: " . mysqli_connect_error());
-    }
+    include("db-connection.php");
 
     $sql = "select k.*,od.odAdi from kullanicilar k join ogrenimdurumu od on od.odID = k.ogrenimSeviyesi where kullaniciID = 1";
     $sonuc = mysqli_query($conn,$sql);
