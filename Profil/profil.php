@@ -19,7 +19,7 @@
   ?>
     <header>
         <div class="left-side">
-          <a href="../MainPage/indeks.html">
+          <a href="../MainPage/index.php">
             <img src="../images/ödevboxicon.png" alt="Learnify" />
           </a>
           <h3>learnify</h3>
@@ -33,7 +33,7 @@
           />
         </div>
         <div class="right-side">
-          <a href="../Soru/soru.html"> <span class="button-text">soru sor</span></a>
+          <a href="../Soru/soru.php"> <span class="button-text">soru sor</span></a>
           <span class="icons">
             <i class="fa-regular fa-bell"></i>
           </span>

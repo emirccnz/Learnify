@@ -199,7 +199,7 @@ header h1{
     text-align: center;
     justify-content: center;
     align-items: center;
-    background-image: url("/images/textBloon.png");
+    background-image: url("../images/textBloon.png");
     background-size: cover;
     background-position: center;
     height: 40rem;

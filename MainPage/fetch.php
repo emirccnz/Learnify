@@ -28,7 +28,9 @@ require 'db.php'; session_start(); header('Content-Type:application/json');
 if($_SERVER['REQUEST_METHOD']!=='POST') exit;
 if(!isset($_SESSION['kullaniciID'])){echo json_encode(['success'=>false]);exit;}
 $metin=mysqli_real_escape_string($conn,trim($_POST['soruAciklamasi']));
-$dersID=intval($_POST['dersID']); $puan=intval($_POST['soruPuani']); $kID=$_SESSION['kullaniciID'];
+$dersID=intval($_POST['dersID']); 
+$puan=intval($_POST['soruPuani']); 
+$kID=$_SESSION['kullaniciID'];
 if(!$metin){echo json_encode(['success'=>false]);exit;}
 mysqli_query($conn,"INSERT INTO sorular(kullaniciID,soruAciklamasi,soruPuani,dersID) VALUES($kID,'$metin',$puan,$dersID)");
 $new=mysqli_insert_id($conn);
