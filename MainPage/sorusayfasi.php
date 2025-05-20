@@ -9,7 +9,7 @@ if($soruID <= 0){
     die("Geçersiz soru numarası");
 }
 
-$soruQuery = "select s.soruID,s.soruAciklamasi,s.soruPuani,d.dersAdi,k.kullaniciTakmaAdi as soruSahibiAdi
+$soruQuery = "select s.soruID,s.soruAciklamasi,s.fotograf,s.soruPuani,d.dersAdi,k.kullaniciTakmaAdi as soruSahibiAdi
 from sorular s
 join dersler d on s.dersID = d.dersID
 join kullanicilar k on s.kullaniciID = k.kullaniciID
@@ -42,6 +42,7 @@ $cevaplar = mysqli_fetch_all($cevapSonuc, MYSQLI_ASSOC);
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../images/ödevboxicon.png" type="image/x-icon" />
   <link rel="stylesheet" href="../genel-css/header.css" />
   <link rel="stylesheet" href="../genel-css/footer.css" />
   <link rel="stylesheet" href="soru.css" />
@@ -53,7 +54,7 @@ $cevaplar = mysqli_fetch_all($cevapSonuc, MYSQLI_ASSOC);
  
 <header>
         <div class="left-side">
-          <a href="../MainPage/indeks.html">
+          <a href="../MainPage/index.php">
             <img src="../images/ödevboxicon.png" alt="Learnify" />
           </a>
           <h3>learnify</h3>
@@ -67,20 +68,21 @@ $cevaplar = mysqli_fetch_all($cevapSonuc, MYSQLI_ASSOC);
           />
         </div>
         <div class="right-side">
-          <a href="../Soru/soru.html"> <span class="button-text">soru sor</span></a>
+          <a href="../Soru/soru.php"> <span class="button-text">soru sor</span></a>
           <span class="icons">
             <i class="fa-regular fa-bell"></i>
           </span>
           <span class="icons">
-            <i class="fa-regular fa-user" onclick="location.href = '../Profil/profil.html'"></i>
+            <i class="fa-regular fa-user" onclick="location.href = '../Profil/profil.php'"></i>
           </span>
         </div>
       </header>
 
-  <main class="soru-container">
+  <main class="soru-cevap-container">
 
-    <div class="soru-detay">
-      <div class="soru-header">
+    <div class="sol-sutun">
+          <div class="soru-detay">
+        <div class="soru-header">
         <div class="profil-kutu">
           <img
             src="../profile-images/<?php echo $profilFoto; ?>"
@@ -95,6 +97,19 @@ $cevaplar = mysqli_fetch_all($cevapSonuc, MYSQLI_ASSOC);
           <?php echo htmlspecialchars($soru['dersAdi']); ?>
         </div>
       </div>
+    </div>
+
+     <?php if (!empty($soru['fotograf'])): ?>
+          <div class="soru-foto">
+            <img
+              src="../Soru/soru-fotolari/<?php echo$soru['fotograf']; ?>"
+              alt="Soru Fotoğrafi"
+              class="soru-foto-img"
+            />
+          </div>
+        <?php endif; ?>
+
+
 
       <div class="soru-icerik">
         <p><?php echo nl2br(htmlspecialchars($soru['soruAciklamasi'])); ?></p>
@@ -104,34 +119,36 @@ $cevaplar = mysqli_fetch_all($cevapSonuc, MYSQLI_ASSOC);
       </div>
     </div>
 
-    <div class="cevaplar-bolumu">
-      <h3>Cevaplar</h3>
+     <div class="sag-sutun">
+      <div class="cevaplar-bolumu">
+        <h3>Cevaplar</h3>
 
-      <?php if (count($cevaplar) === 0): ?>
-        <p>Henüz bu soruya cevap verilmemiş.</p>
-      <?php else: ?>
-        <?php foreach ($cevaplar as $cevap): ?>
-          <div class="cevap-kutu">
-            <div class="cevap-header">
-              <div class="profil-kutu">
-                <img
-                  src="<?php echo htmlspecialchars($cevap['cevapSahibiFoto']); ?>"
-                  alt="Profil"
-                  class="profil-img"
-                />
-                <span class="kullanici-adi">
-                  <?php echo htmlspecialchars($cevap['cevapSahibiAdi']); ?>
-                </span>
+        <?php if (count($cevaplar) === 0): ?>
+          <p>Henüz bu soruya cevap verilmemiş.</p>
+        <?php else: ?>
+          <?php foreach ($cevaplar as $cevap): ?>
+            <div class="cevap-kutu">
+              <div class="cevap-header">
+                <div class="profil-kutu">
+                  <img
+                    src="../profile-images/<?php echo $cevap['cevapSahibiFoto']; ?>"
+                    alt="Profil"
+                    class="profil-img"
+                  />
+                  <span class="kullanici-adi">
+                    <?php echo htmlspecialchars($cevap['cevapSahibiAdi']); ?>
+                  </span>
+                </div>
               </div>
-             
+              <div class="cevap-icerik">
+                <p><?php echo nl2br(htmlspecialchars($cevap['cevapMetni'])); ?></p>
+              </div>
             </div>
-            <div class="cevap-icerik">
-              <p><?php echo nl2br(htmlspecialchars($cevap['cevapMetni'])); ?></p>
-            </div>
-          </div>
-        <?php endforeach; ?>
-      <?php endif; ?>
+          <?php endforeach; ?>
+        <?php endif; ?>
+      </div>
     </div>
+
   </main>
 
  <footer class="footer">
