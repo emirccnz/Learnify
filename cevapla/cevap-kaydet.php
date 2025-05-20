@@ -10,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"] = "POST"){
         echo "<script>alert('Yanıtınız kaydedildi!'); location.href = '../sorusayfasi.php?soruID=$soruID'</script>";
     }
     else{
-        echo "<script>alert('Yanıt kaydedilirken bir hata oluştu!'); location.href = '../sorusayfasi.php?soruID=$soruID'</script>";
+        echo "<script>alert('Yanıt kaydedilirken bir hata oluştu!'); location.href = '../MainPage/sorusayfasi.php?soruID=$soruID'</script>";
     }
     
 }

@@ -109,7 +109,7 @@
                     </thead>
                     <tbody>
                         <?php
-                        $sql = "SELECT c.*, k.kullaniciAdi FROM cevaplar c 
+                        $sql = "SELECT c.*, k.kullaniciTakmaAdi FROM cevaplar c 
                                 JOIN kullanicilar k ON c.kullaniciID = k.kullaniciID 
                                 ORDER BY c.cevapID DESC";
                         $result = mysqli_query($conn, $sql);
@@ -117,9 +117,8 @@
                         while($row = mysqli_fetch_assoc($result)) {
                             echo "<tr>";
                             echo "<td>" . $row['cevapID'] . "</td>";
-                            echo "<td>" . $row['kullaniciAdi'] . "</td>";
+                            echo "<td>" . $row['kullaniciTakmaAdi'] . "</td>";
                             echo "<td>" . substr($row['cevapMetni'], 0, 100) . "...</td>";
-                            echo "<td>" . $row['cevapTarihi'] . "</td>";
                             echo "<td><button onclick='deleteAnswer(" . $row['cevapID'] . ")' class='delete-btn'><i class='fas fa-trash'></i></button></td>";
                             echo "</tr>";
                         }

@@ -5,7 +5,6 @@ header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['userId'])) {
     $userId = intval($_POST['userId']);
-    
     $sql = "DELETE FROM cevaplar WHERE kullaniciID = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "i", $userId);
