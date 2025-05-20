@@ -12,6 +12,7 @@ html,body {
   font-family: Arial, sans-serif;
 }
 
+
 body{
 display: flex;
   flex-direction: column; 
@@ -35,6 +36,7 @@ main{
 .sol-sutun {
   flex: 1;                
   min-width: 50rem;       
+
   background: rgba(255, 255, 255, 0.95);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

@@ -13,10 +13,19 @@
   <?php
   include("../genel-php/session-query.php");
   include("../genel-php/profil-bilgileri.php");
+  if($_GET['soruID']){
+    $soruID = $_GET['soruID'];
+    $sorgu = "select s.*,k.profilFoto,k.kullaniciTakmaAdi,k.profilFoto from sorular s join kullanicilar k on k.kullaniciID = s.kullaniciID   where soruID = $soruID";
+    $result = mysqli_query($conn,$sorgu);
+    $row = mysqli_fetch_assoc($result);
+  }
+  else{
+    echo "<script>alert('Soru yüklenirken bir hata oluştu.')</script>";
+  }
   ?>
     <header>
         <div class="left-side">
-          <a href="../MainPage/indeks.html">
+          <a href="../MainPage/index.php">
             <img src="../images/ödevboxicon.png" alt="Learnify" />
           </a>
           <h3>learnify</h3>
@@ -40,12 +49,25 @@
         </div>
       </header>
 
-    <form action="cevap-php" method="post" enctype = "multipart/form-data">
+    <form action="cevap-kaydet.php?soruID=<?php echo $soruID;?>" method="post" enctype = "multipart/form-data">
     <div class="replyContainer">
         <div class="quest" id="quest">
-            
+            <div class="content-header">
+                <div class="profile">
+                    <img src="../profile-images/<?php echo $row['profilFoto'];?>" alt="user-profil" />
+                    <span><?php echo $row['kullaniciTakmaAdi'];?></span>
+                  </div>
+            </div>
+            <div class="questionText">
+                
+                <div class="questText">
+                  <?php if($row['fotograf']){
+                  echo "<div src='qtImgDiv'><img src= '../Soru/soru-fotolari/{$row['fotograf']}'/></div>";
+                } ?>
+                <p><?php echo $row['soruAciklamasi']; ?></p></div>
+            </div>
           </div>
-          <div class="reply">
+            <div class="reply">
             <div class="content-header">
                 <div class="profile">
                     <img src="../profile-images/<?php echo $profilFoto;?>" alt="user-profil" />
@@ -53,9 +75,10 @@
                   </div>
             </div>
             <div class="replies">
-                <textarea class="replyText" placeholder="Cevabını buraya yaz."></textarea>
+                <textarea class="replyText" placeholder="Cevabını buraya yaz." name="cevapMetni"></textarea>
             </div>
           </div>
+
     </div>
     <div class="buttonDiv">
         <button class="send" type="submit">Cevabını Gönder</button>

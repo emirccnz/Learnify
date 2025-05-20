@@ -16,17 +16,17 @@ document.addEventListener('click', (e) => {
 });
 
 
-function bindAnswerButtons() {
-  document.querySelectorAll('.answerBtn').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
+// function bindAnswerButtons() {
+//   document.querySelectorAll('.answerBtn').forEach((btn) => {
+//     btn.addEventListener('click', (e) => {
     
-      const card = e.target.closest('.quest');
-      if (!card) return;
-      localStorage.setItem('selectedQuest', card.outerHTML);
-      window.location.href = '../cevapla/cevapla.php';
-    });
-  });
-}
+//       const card = e.target.closest('.quest');
+//       if (!card) return;
+//       localStorage.setItem('selectedQuest', card.outerHTML);
+//       target.parentElement.src = "../cevapla/cevapla.php?soruID=${q.soruID}"
+//     });
+//   });
+// }
 
 
 async function loadQuestions({
@@ -75,7 +75,7 @@ async function loadQuestions({
 
       <div class="answer">
         <span class="points">+${q.soruPuani} pn</span>
-        <button class="answerBtn">Cevapla</button>
+        <a class="answerBtn" href="../cevapla/cevapla.php?soruID=${q.soruID}">Cevapla</a>
       </div>
     `;
 
