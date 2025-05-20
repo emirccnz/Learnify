@@ -92,8 +92,23 @@
             <button id="questionsBtn">Sorular</button>
           </div>
           <div class="content" id="contentDiv">
-              <div class="replies">
-                <p>Henüz soru cevaplamadın.</p>
+              <div class="questions" style = "display:flex;">
+                <?php 
+                    $sql2 = "SELECT c.*, s.soruAciklamasi, d.dersAdi FROM cevaplar c JOIN sorular s ON c.soruID = s.soruID JOIN dersler d ON s.dersID = d.dersID WHERE c.kullaniciID = $userID ORDER BY c.cevapID DESC;";
+                    $result2 = mysqli_query($conn,$sql2);
+                    if(mysqli_num_rows($result2) > 0){
+                      while($row2 = mysqli_fetch_assoc($result2)){
+                        echo "<div class='soruDiv'>";
+                        echo "<img src='../profile-images/$profilFoto' alt=''>";
+                        echo "<p class='soruAciklamasi'>" . mb_substr($row2["cevapMetni"],0,40,"UTF-8") . "...</p>";
+                        echo "<p class='soruDers'>{$row2['dersAdi']}</p>";
+                        echo "</div>";
+                      }
+                    }
+                    else{
+                      echo "<p>Henüz soru cevaplamadın.</p>";
+                    }
+                    ?>
               </div>
               <div class="questions">
                     <?php 

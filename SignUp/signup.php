@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["SignUp-button"])) {
     if (mysqli_num_rows($emailSorgu) > 0) {
         echo "<script>
         alert('Girilen E-mail zaten kayıtlı!');
-        window.location.href = '../Login/LearnifyLogin.html';
+        window.location.href = '../Login/LearnifyLogin.php';
         </script>";
         exit();
     }
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["SignUp-button"])) {
     if (mysqli_num_rows($kullaniciAdiSorgu) > 0) {
         echo "<script>
         alert('Kullanıcı Adı Daha Önceden Kullanılmış!');
-        window.location.href = '../Login/LearnifyLogin.html';
+        window.location.href = '../Login/LearnifyLogin.php';
         </script>";
         exit();
     }
@@ -50,12 +50,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["SignUp-button"])) {
 
         echo "<script>
         alert('Kayıt Başarılı!');
-        window.location.href = '../Login/LearnifyLogin.html';
+        window.location.href = '../Login/LearnifyLogin.php';
         </script>";
     } else {
         echo "<script>
         alert('Kayıt Oluşturulamadı!');
-        window.location.href = '../Login/LearnifyLogin.html';
+        window.location.href = '../Login/LearnifyLogin.php';
         </script>";
     }
 
