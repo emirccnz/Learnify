@@ -7,9 +7,11 @@
 html{
   font-size: 9px;
 }
-
+main{
+  min-height: 90vh;
+}
 .soru-container {
-  margin: 1rem auto; 
+  margin: 5rem ; 
   background: rgba(255, 255, 255, 0.95);
   padding: 0.8rem; 
   border-radius: 8px;

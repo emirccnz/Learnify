@@ -65,7 +65,7 @@ $profilFoto = !empty($user['profilFoto']) ? '../profile-images/' . $user['profil
       </div>
 
       <span class="user-profile">
-        <a href="../Profil/profil.php">
+        <a href="../  /profil.php">
           <img class="userProfile"
           src="../profile-images/<?php echo $profilFoto; ?>"
           alt="Profil"
