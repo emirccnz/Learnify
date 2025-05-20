@@ -4,57 +4,103 @@
   box-sizing: border-box;
 }
 
-html{
+html,body {
+   height: 100%;          
+  margin: 0;
+  padding: 0;
   font-size: 9px;
+  font-family: Arial, sans-serif;
 }
 
-.soru-container {
-  margin: 1rem auto; 
-  background: rgba(255, 255, 255, 0.95);
-  padding: 0.8rem; 
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  font-family: Arial, sans-serif;
-  max-width: 800px; 
+body{
+display: flex;
+  flex-direction: column; 
 }
+
+main{
+  flex: 1;
+
+}
+
+.soru-cevap-container {
+  display: flex;
+  gap: 2rem;             
+  max-width: 1200px;      
+  margin: 7rem auto;    
+  padding: 1rem;
+
+}
+
+
+.sol-sutun {
+  flex: 1;                
+  min-width: 50rem;       
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.sag-sutun {
+  flex: 1;                
+  min-width: 50rem;
+  background: rgba(248, 248, 248, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  font-size: 2rem;
+ 
+}
+
 
 .soru-header {
   display: flex;
   align-items: center;
-  gap: 0.8rem; 
+  gap: 0.8rem;
   margin-bottom: 0.8rem;
 }
 
 .profil-kutu {
   display: flex;
   align-items: center;
-  gap: 0.4rem; 
+  gap: 0.4rem;
 }
 
 .profil-img {
-  width: 3rem; 
+  width: 3rem;
   height: 3rem;
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid #2b4360; 
+  border: 1px solid #2b4360;
 }
 
 .kullanici-adi {
   font-weight: bold;
-  font-size: 1rem; 
+  font-size: 2rem;
   color: #333;
 }
 
 .ders-etiket {
   background: #f0f0f0;
-  padding: 0.3rem 0.6rem; 
+  padding: 0.3rem 0.6rem;
   border-radius: 16px;
-  font-size: 0.9rem; 
-   color: #555;
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.soru-foto {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.soru-foto-img {
+  max-width: 100%;        
+  height: 300px;
+  border-radius: 4px;
 }
 
 .soru-icerik p {
-  font-size: 0.95rem; 
+  font-size: 3rem;
   line-height: 1.4;
   margin-bottom: 0.8rem;
 }
@@ -62,21 +108,22 @@ html{
 .soru-puan {
   color: #c98600;
   font-weight: bold;
-  font-size: 0.9rem;
-  margin-bottom: 1rem; 
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }
 
+
 .cevaplar-bolumu h3 {
-  font-size: 1.2rem; 
+  font-size: 2rem;
   margin-bottom: 0.8rem;
-  border-bottom: 1px solid #ddd; 
+  border-bottom: 1px solid #ddd;
   padding-bottom: 0.4rem;
 }
 
 .cevap-kutu {
   border: 1px solid #e0e0e0;
   border-radius: 4px;
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
   padding: 0.8rem;
   background: #fff;
 }
@@ -84,11 +131,10 @@ html{
 .cevap-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.6rem; /
+  margin-bottom: 0.6rem;
 }
 
 .cevap-icerik p {
-  font-size: 0.9rem; 
-  line-height: 1.3; 
+  font-size: 2rem;
+  line-height: 1.3;
 }
